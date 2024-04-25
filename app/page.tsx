@@ -5,7 +5,7 @@ import { cn, contrastingColor } from "@/lib/utils";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
-import { inter, poppins, roboto, raleway, work_sans } from "@/lib/fonts";
+import { fontsArray, fonts, Fonts } from "@/lib/fonts";
 import {
 	Select,
 	SelectContent,
@@ -18,7 +18,7 @@ const Page = () => {
 		name: string;
 		description: string;
 		backgroundColor: string;
-		font: "Poppins" | "Inter" | "Roboto" | "Raleway" | "Work Sans";
+		font: Fonts;
 	}>({
 		name: "Bordly",
 		description: "build your design system in 5 minutes with bordly",
@@ -34,11 +34,14 @@ const Page = () => {
 			}}
 			className={cn(
 				"space-y-4 min-h-screen",
-				brand.font === "Inter" ? inter.className : "",
-				brand.font === "Poppins" ? poppins.className : "",
-				brand.font === "Roboto" ? roboto.className : "",
-				brand.font === "Raleway" ? raleway.className : "",
-				brand.font === "Work Sans" ? work_sans.className : ""
+
+				brand.font === "Inter" ? fonts.inter.className : "",
+				brand.font === "Poppins" ? fonts.poppins.className : "",
+				brand.font === "Roboto" ? fonts.roboto.className : "",
+				brand.font === "Raleway" ? fonts.raleway.className : "",
+				brand.font === "Work Sans" ? fonts.work_sans.className : "",
+				brand.font === "DM Sans" ? fonts.dm_sans.className : "",
+				brand.font === "Chivo" ? fonts.chivo.className : ""
 			)}
 		>
 			<div className="container space-y-4 py-4">
@@ -65,15 +68,10 @@ const Page = () => {
 
 					<Select
 						defaultValue={brand.font}
-						onValueChange={(e) =>
+						onValueChange={(e: Fonts) =>
 							setBrand({
 								...brand,
-								font: e as
-									| "Poppins"
-									| "Inter"
-									| "Roboto"
-									| "Raleway"
-									| "Work Sans",
+								font: e,
 							})
 						}
 					>
@@ -81,12 +79,11 @@ const Page = () => {
 							<span className="font-medium">{brand.font}</span>
 						</SelectTrigger>
 						<SelectContent className="max-w-xs">
-							<SelectItem value={"Poppins"}>Poppins</SelectItem>
-							<SelectItem value={"Inter"}>Inter</SelectItem>
-							<SelectItem value={"Roboto"}>Roboto</SelectItem>
-							<SelectItem value={"Noto Sans"}>Noto Sans</SelectItem>
-							<SelectItem value={"Raleway"}>Raleway</SelectItem>
-							<SelectItem value={"Work Sans"}>Work Sans</SelectItem>
+							{fontsArray.map((font) => (
+								<SelectItem key={font.name} value={font.name}>
+									{font.name}
+								</SelectItem>
+							))}
 						</SelectContent>
 					</Select>
 				</div>
