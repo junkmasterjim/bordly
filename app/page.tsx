@@ -102,7 +102,7 @@ const Page = () => {
 								color: contrastingColor(color.hex),
 							}}
 							onClick={() => setBrand({ ...brand, backgroundColor: color.hex })}
-							className="aspect-[4/3] w-8 cursor-pointer border-2 border-border/50"
+							className="aspect-[4/3] w-8 cursor-pointer shadow"
 						/>
 					))}
 				</div>
