@@ -21,7 +21,7 @@ const Page = () => {
 		font: "Poppins" | "Inter" | "Roboto" | "Raleway" | "Work Sans";
 	}>({
 		name: "Bordly",
-		description: "A simple brand board creation tool, built with Next.js",
+		description: "build your design system in 5 minutes with bordly",
 		backgroundColor: "#ffffff",
 		font: "Poppins",
 	});
@@ -78,7 +78,7 @@ const Page = () => {
 						}
 					>
 						<SelectTrigger className="max-w-xs">
-							<span className="font-medium">Font</span>
+							<span className="font-medium">{brand.font}</span>
 						</SelectTrigger>
 						<SelectContent className="max-w-xs">
 							<SelectItem value={"Poppins"}>Poppins</SelectItem>
