@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/card";
 import { Download, Mountain, Palette, Settings } from "lucide-react";
 
-export function DashboardExample() {
+const Page = () => {
 	return (
 		<div key="1" className="flex min-h-screen">
 			<div className="flex-1 p-6">
@@ -264,6 +264,6 @@ export function DashboardExample() {
 			</div>
 		</div>
 	);
-}
+};
 
-export default DashboardExample;
+export default Page;
