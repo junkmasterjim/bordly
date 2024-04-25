@@ -1,4 +1,4 @@
-export const colors = [
+export const bgColors = [
 	{
 		bgColor: "bg-red-600",
 		hex: "#DC2626",

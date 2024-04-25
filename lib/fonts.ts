@@ -1,35 +1,11 @@
-import {
-	Inter,
-	Poppins,
-	Roboto,
-	Noto_Sans,
-	Raleway,
-	Work_Sans,
-	DM_Sans,
-	Chivo,
-} from "next/font/google";
+import { Inter, Poppins, Raleway, Work_Sans, DM_Sans } from "next/font/google";
 
-export type Fonts =
-	| "Inter"
-	| "Poppins"
-	| "Roboto"
-	| "Raleway"
-	| "Work Sans"
-	| "DM Sans"
-	| "Chivo";
+export type Fonts = "Inter" | "Poppins" | "Raleway" | "Work Sans" | "DM Sans";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({
 	subsets: ["latin"],
 	weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
-const roboto = Roboto({
-	subsets: ["latin"],
-	weight: ["100", "300", "400", "500", "700"],
-});
-const noto_sans = Noto_Sans({
-	subsets: ["latin"],
-	weight: ["100", "300", "400", "500", "700"],
 });
 const raleway = Raleway({
 	subsets: ["latin"],
@@ -44,11 +20,6 @@ const dm_sans = DM_Sans({
 	display: "swap",
 });
 
-const chivo = Chivo({
-	subsets: ["latin"],
-	display: "swap",
-});
-
 export const fontsArray = [
 	{
 		name: "Inter",
@@ -57,10 +28,6 @@ export const fontsArray = [
 	{
 		name: "Poppins",
 		font: poppins,
-	},
-	{
-		name: "Roboto",
-		font: roboto,
 	},
 	{
 		name: "Raleway",
@@ -74,18 +41,12 @@ export const fontsArray = [
 		name: "DM Sans",
 		font: dm_sans,
 	},
-	{
-		name: "Chivo",
-		font: chivo,
-	},
 ];
 
 export const fonts = {
 	inter,
 	poppins,
-	roboto,
 	raleway,
 	work_sans,
 	dm_sans,
-	chivo,
 };
