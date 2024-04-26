@@ -5,7 +5,7 @@ import {
 	CardDescription,
 	CardHeader,
 	CardTitle,
-} from "./ui/card";
+} from "./ui/brand-card";
 import { getContrastingColor, getLighterOrDarkerColor } from "@/lib/colors";
 import {
 	bodyFont,
@@ -15,7 +15,7 @@ import {
 } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 
-export const HeadingsCard = ({
+export const DashboardHeadingsCard = ({
 	brand,
 	className,
 }: {
@@ -24,24 +24,28 @@ export const HeadingsCard = ({
 }) => {
 	return (
 		<Card
+			brand={brand}
 			style={{
 				backgroundColor: brand.backgroundColor,
 				borderColor: getLighterOrDarkerColor(brand.accentColor, 0.5),
 				color: getContrastingColor(brand.backgroundColor),
 			}}
 			className={cn(
+				"shadow",
 				headingsFont(brand.font.headings.font).className,
 				headingsWeight(brand.font.headings.weight),
 				className
 			)}
 		>
 			<CardHeader
+				brand={brand}
 				className="border-b mb-4"
 				style={{
 					borderColor: getLighterOrDarkerColor(brand.accentColor, 0.5),
 				}}
 			>
 				<CardTitle
+					brand={brand}
 					className={cn(
 						headingsFont(brand.font.headings.font),
 						headingsWeight(brand.font.headings.weight)
@@ -50,6 +54,10 @@ export const HeadingsCard = ({
 					Headings
 				</CardTitle>
 				<CardDescription
+					brand={brand}
+					style={{
+						color: brand.mutedColor,
+					}}
 					className={cn(
 						bodyFont(brand.font.body.font),
 						bodyWeight(brand.font.body.weight)
