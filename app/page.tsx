@@ -19,7 +19,7 @@ const Page = () => {
 		name: "Bordly",
 		trademark: "true",
 		description: "build your design system in 5 minutes with bordly",
-		backgroundColor: "#ffffff",
+		backgroundColor: "#FEFCE8",
 		mutedColor: "#444444",
 		accentColor: "#CA8A04",
 		font: {

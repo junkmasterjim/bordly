@@ -1,7 +1,7 @@
 "use client";
 
-import { Brand } from "@/lib/types";
-import { useState } from "react";
+import { Brand, Palette } from "@/lib/types";
+import { Key, useState } from "react";
 import { Card, CardContent, CardHeader } from "./ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger } from "./ui/select";
 import { colors, getContrastingColor } from "@/lib/colors";
@@ -15,7 +15,7 @@ export const BackgroundColorSelect = ({
 	brand: Brand;
 	setBrand: React.Dispatch<React.SetStateAction<Brand>>;
 }) => {
-	const [palette, setPalette] = useState<"200" | "400" | "600" | "800">("400");
+	const [palette, setPalette] = useState<Palette>("50");
 
 	return (
 		<Card className={className}>
@@ -24,7 +24,7 @@ export const BackgroundColorSelect = ({
 				{/* select for color palette */}
 				<Select
 					defaultValue={palette}
-					onValueChange={(e: "200" | "400" | "600" | "800") => setPalette(e)}
+					onValueChange={(e: Palette) => setPalette(e)}
 				>
 					<SelectTrigger className="max-w-xs">
 						<div className="flex gap-2 items-center">
@@ -34,6 +34,12 @@ export const BackgroundColorSelect = ({
 						</div>
 					</SelectTrigger>
 					<SelectContent className="max-w-xs">
+						<SelectItem value="50">
+							<span className="flex gap-2 items-center">
+								<div className="size-4 rounded bg-neutral-50" />
+								50
+							</span>
+						</SelectItem>
 						<SelectItem value="200">
 							<span className="flex gap-2 items-center">
 								<div className="size-4 rounded bg-neutral-200" />
@@ -58,22 +64,33 @@ export const BackgroundColorSelect = ({
 								800
 							</span>
 						</SelectItem>
+
+						<SelectItem value="950">
+							<span className="flex gap-2 items-center">
+								<div className="size-4 rounded bg-neutral-950" />
+								950
+							</span>
+						</SelectItem>
 					</SelectContent>
 				</Select>
 			</CardHeader>
 			<CardContent>
 				<div className="flex gap-4 items-center justify-center flex-wrap ">
-					{colors[palette].map((color) => (
-						<Card
-							key={color.bgColor}
-							style={{
-								backgroundColor: color.hex,
-								color: getContrastingColor(color.hex),
-							}}
-							onClick={() => setBrand({ ...brand, backgroundColor: color.hex })}
-							className="aspect-[4/3] w-8 cursor-pointer shadow border-none"
-						/>
-					))}
+					{colors[palette].map(
+						(color: { bgColor: Key | null | undefined; hex: string }) => (
+							<Card
+								key={color.bgColor}
+								style={{
+									backgroundColor: color.hex,
+									// color: getContrastingColor(color.hex),
+								}}
+								onClick={() =>
+									setBrand({ ...brand, backgroundColor: color.hex })
+								}
+								className="aspect-[4/3] w-8 cursor-pointer shadow border-none"
+							/>
+						)
+					)}
 				</div>
 			</CardContent>
 		</Card>

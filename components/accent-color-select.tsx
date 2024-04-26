@@ -1,6 +1,6 @@
 "use client";
 
-import { Brand } from "@/lib/types";
+import { Brand, Palette } from "@/lib/types";
 import { useState } from "react";
 import { Card, CardContent, CardHeader } from "./ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger } from "./ui/select";
@@ -15,7 +15,7 @@ export const AccentColorSelect = ({
 	brand: Brand;
 	setBrand: React.Dispatch<React.SetStateAction<Brand>>;
 }) => {
-	const [palette, setPalette] = useState<"200" | "400" | "600" | "800">("600");
+	const [palette, setPalette] = useState<Palette>("600");
 
 	return (
 		<Card className={className}>
@@ -23,7 +23,7 @@ export const AccentColorSelect = ({
 				<p>Accent</p>
 				<Select
 					defaultValue={palette}
-					onValueChange={(e: "200" | "400" | "600" | "800") => setPalette(e)}
+					onValueChange={(e: Palette) => setPalette(e)}
 				>
 					<SelectTrigger className="max-w-xs">
 						<div className="flex gap-2 items-center">
@@ -33,6 +33,12 @@ export const AccentColorSelect = ({
 						</div>
 					</SelectTrigger>
 					<SelectContent className="max-w-xs">
+						<SelectItem value="50">
+							<span className="flex gap-2 items-center">
+								<div className="size-4 rounded bg-neutral-50" />
+								50
+							</span>
+						</SelectItem>
 						<SelectItem value="200">
 							<span className="flex gap-2 items-center">
 								<div className="size-4 rounded bg-neutral-200" />
@@ -55,6 +61,12 @@ export const AccentColorSelect = ({
 							<span className="flex gap-2 items-center">
 								<div className="size-4 rounded bg-neutral-800" />
 								800
+							</span>
+						</SelectItem>
+						<SelectItem value="950">
+							<span className="flex gap-2 items-center">
+								<div className="size-4 rounded bg-neutral-950" />
+								950
 							</span>
 						</SelectItem>
 					</SelectContent>

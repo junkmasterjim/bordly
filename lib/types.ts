@@ -1,5 +1,7 @@
 export type Fonts = "Inter" | "Poppins" | "Raleway" | "Work Sans" | "DM Sans";
 
+export type Palette = "50" | "200" | "400" | "600" | "800" | "950";
+
 export type Brand = {
 	name: string;
 	trademark: "true" | "false";

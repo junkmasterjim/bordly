@@ -1,4 +1,102 @@
 export const colors = {
+	50: [
+		{
+			bgColor: "bg-red-50",
+			hex: "#FEF2F2",
+		},
+		{
+			bgColor: "bg-orange-50",
+			hex: "#FFF7ED",
+		},
+		{
+			bgColor: "bg-amber-50",
+			hex: "#FFFBEB",
+		},
+		{
+			bgColor: "bg-yellow-50",
+			hex: "#FEFCE8",
+		},
+		{
+			bgColor: "bg-lime-50",
+			hex: "#F7FEE7",
+		},
+		{
+			bgColor: "bg-green-50",
+			hex: "#F0FDF4",
+		},
+		{
+			bgColor: "bg-emerald-50",
+			hex: "#ECFDF5",
+		},
+		{
+			bgColor: "bg-teal-50",
+			hex: "#F0FDFA",
+		},
+		{
+			bgColor: "bg-cyan-50",
+			hex: "#ECFEFF",
+		},
+		{
+			bgColor: "bg-sky-50",
+			hex: "#F0F9FF",
+		},
+		{
+			bgColor: "bg-blue-50",
+			hex: "#EFF6FF",
+		},
+		{
+			bgColor: "bg-indigo-50",
+			hex: "#EEF2FF",
+		},
+		{
+			bgColor: "bg-violet-50",
+			hex: "#F5F3FF",
+		},
+		{
+			bgColor: "bg-purple-50",
+			hex: "#FAF5FF",
+		},
+		{
+			bgColor: "bg-fuchsia-50",
+			hex: "#FDF4FF",
+		},
+		{
+			bgColor: "bg-pink-50",
+			hex: "#FDF2F8",
+		},
+		{
+			bgColor: "bg-rose-50",
+			hex: "#FFF1F2",
+		},
+		{
+			bgColor: "bg-stone-50",
+			hex: "#FAFAF9",
+		},
+		{
+			bgColor: "bg-neutral-50",
+			hex: "#FAFAFA",
+		},
+		{
+			bgColor: "bg-zinc-50",
+			hex: "#FAFAFA",
+		},
+		{
+			bgColor: "bg-gray-50",
+			hex: "#F9FAFB",
+		},
+		{
+			bgColor: "bg-slate-50",
+			hex: "#F8FAFC",
+		},
+		{
+			bgColor: "bg-black",
+			hex: "#000000",
+		},
+		{
+			bgColor: "bg-white",
+			hex: "#FFFFFF",
+		},
+	],
 	200: [
 		{
 			bgColor: "bg-red-200",
@@ -381,6 +479,104 @@ export const colors = {
 		{
 			bgColor: "bg-slate-800",
 			hex: "#1E293B",
+		},
+		{
+			bgColor: "bg-black",
+			hex: "#000000",
+		},
+		{
+			bgColor: "bg-white",
+			hex: "#FFFFFF",
+		},
+	],
+	950: [
+		{
+			bgColor: "bg-red-950",
+			hex: "#450A0A",
+		},
+		{
+			bgColor: "bg-orange-950",
+			hex: "#431407",
+		},
+		{
+			bgColor: "bg-amber-950",
+			hex: "#451A03",
+		},
+		{
+			bgColor: "bg-yellow-950",
+			hex: "#422006",
+		},
+		{
+			bgColor: "bg-lime-950",
+			hex: "#1A2E05",
+		},
+		{
+			bgColor: "bg-green-950",
+			hex: "#052E16",
+		},
+		{
+			bgColor: "bg-emerald-950",
+			hex: "#022C22",
+		},
+		{
+			bgColor: "bg-teal-950",
+			hex: "#042F2E",
+		},
+		{
+			bgColor: "bg-cyan-950",
+			hex: "#083344",
+		},
+		{
+			bgColor: "bg-sky-950",
+			hex: "#082F49",
+		},
+		{
+			bgColor: "bg-blue-950",
+			hex: "#172554",
+		},
+		{
+			bgColor: "bg-indigo-950",
+			hex: "#1E1B4B",
+		},
+		{
+			bgColor: "bg-violet-950",
+			hex: "#2E1065",
+		},
+		{
+			bgColor: "bg-purple-950",
+			hex: "#3B0764",
+		},
+		{
+			bgColor: "bg-fuchsia-950",
+			hex: "#4A044E",
+		},
+		{
+			bgColor: "bg-pink-950",
+			hex: "#500724",
+		},
+		{
+			bgColor: "bg-rose-950",
+			hex: "#4C0519",
+		},
+		{
+			bgColor: "bg-stone-950",
+			hex: "#0C0A09",
+		},
+		{
+			bgColor: "bg-neutral-950",
+			hex: "#0A0A0A",
+		},
+		{
+			bgColor: "bg-zinc-950",
+			hex: "#09090B",
+		},
+		{
+			bgColor: "bg-gray-950",
+			hex: "#030712",
+		},
+		{
+			bgColor: "bg-slate-950",
+			hex: "#020617",
 		},
 		{
 			bgColor: "bg-black",
