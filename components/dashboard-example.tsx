@@ -15,20 +15,13 @@ import {
 	CardDescription,
 	CardHeader,
 	CardTitle,
-} from "./ui/card";
-import { cn } from "@/lib/utils";
-import {
-	bodyFont,
-	bodyWeight,
-	headingsFont,
-	headingsWeight,
-} from "@/lib/fonts";
-import {
-	getLighterOrDarkerColor,
-	getContrastingColor,
-	isLightColor,
-} from "@/lib/colors";
-import { HeadingsCard } from "./headings-card";
+} from "./ui/brand-card";
+import { getLighterOrDarkerColor, isLightColor } from "@/lib/colors";
+import { DashboardHeadingsCard } from "./dashboard-headings-card";
+import { DashboardBodyCard } from "./dashboard-body-card";
+import { DashboardFontsCard } from "./dashboard-fonts-card";
+
+import { DashboardCopyCard } from "./dashboard-copy-card";
 
 export const DashboardExample = ({ brand }: { brand: Brand }) => {
 	return (
@@ -39,7 +32,7 @@ export const DashboardExample = ({ brand }: { brand: Brand }) => {
 				borderColor: getLighterOrDarkerColor(brand.accentColor, 0.6),
 			}}
 		>
-			<div className="flex min-h-screen">
+			<div className="flex">
 				<div className="flex-1 p-6">
 					{/* Navigation / Header */}
 
@@ -103,87 +96,30 @@ export const DashboardExample = ({ brand }: { brand: Brand }) => {
 					</div>
 
 					{/* Tabs */}
-
 					<Tabs className="w-full" defaultValue="typography">
 						<TabsList className="mb-6 flex w-full border-b">
 							<TabsTrigger value="typography">Typography</TabsTrigger>
 							<TabsTrigger value="color-palette">Color Palette</TabsTrigger>
 						</TabsList>
 
-						{/* Tabs Content 1 */}
+						{/* Tab 1 */}
 
 						<TabsContent value="typography">
 							<div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-								{/* Headings */}
-								<HeadingsCard brand={brand} />
-
-								<Card>
-									<CardHeader>
-										<CardTitle>Body Text</CardTitle>
-										<CardDescription>
-											The primary body text styles used throughout the design
-											system.
-										</CardDescription>
-									</CardHeader>
-									<CardContent>
-										<div className="space-y-4">
-											<div>
-												<p className="text-base font-normal">
-													This is the default body text. It is used for the
-													majority of the content on the site.
-												</p>
-											</div>
-											<div>
-												<p className="text-sm font-normal">
-													This is a smaller body text size, used for captions,
-													labels, and other secondary content.
-												</p>
-											</div>
-											<div>
-												<p className="text-xs font-normal">
-													This is the smallest body text size, used for very
-													minor details and legal copy.
-												</p>
-											</div>
-										</div>
-									</CardContent>
-								</Card>
-								<Card>
-									<CardHeader>
-										<CardTitle>Font Families</CardTitle>
-										<CardDescription>
-											The primary font families used throughout the design
-											system.
-										</CardDescription>
-									</CardHeader>
-									<CardContent>
-										<div className="space-y-4">
-											<div>
-												<h4 className="text-lg font-bold">Heading Font</h4>
-												<p className="font-heading text-2xl font-bold">
-													{brand.font.headings.font}
-												</p>
-											</div>
-											<div>
-												<h4 className="text-lg font-bold">Body Font</h4>
-												<p className="font-body text-2xl">
-													{brand.font.body.font}
-												</p>
-											</div>
-										</div>
-									</CardContent>
-								</Card>
+								<DashboardHeadingsCard className="row-span-2" brand={brand} />
+								<DashboardBodyCard brand={brand} />
+								<DashboardFontsCard brand={brand} />
+								<DashboardCopyCard brand={brand} />
 							</div>
 						</TabsContent>
 
-						{/* Tabs Content 2 */}
-
+						{/* Tab 2 */}
 						<TabsContent value="color-palette">
 							<div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-								<Card>
-									<CardHeader>
-										<CardTitle>Background Colors</CardTitle>
-										<CardDescription>
+								<Card brand={brand}>
+									<CardHeader brand={brand}>
+										<CardTitle brand={brand}>Background Colors</CardTitle>
+										<CardDescription brand={brand}>
 											The background colors used throughout the design system.
 										</CardDescription>
 									</CardHeader>
@@ -205,10 +141,10 @@ export const DashboardExample = ({ brand }: { brand: Brand }) => {
 										</div>
 									</CardContent>
 								</Card>
-								<Card>
-									<CardHeader>
-										<CardTitle>Copy Colors</CardTitle>
-										<CardDescription>
+								<Card brand={brand}>
+									<CardHeader brand={brand}>
+										<CardTitle brand={brand}>Copy Colors</CardTitle>
+										<CardDescription brand={brand}>
 											The foreground colors used throughout the design system.
 										</CardDescription>
 									</CardHeader>
@@ -227,10 +163,10 @@ export const DashboardExample = ({ brand }: { brand: Brand }) => {
 										</div>
 									</CardContent>
 								</Card>
-								<Card>
-									<CardHeader>
-										<CardTitle>Primary Colors</CardTitle>
-										<CardDescription>
+								<Card brand={brand}>
+									<CardHeader brand={brand}>
+										<CardTitle brand={brand}>Primary Colors</CardTitle>
+										<CardDescription brand={brand}>
 											The primary colors used throughout the design system.
 										</CardDescription>
 									</CardHeader>
@@ -249,10 +185,10 @@ export const DashboardExample = ({ brand }: { brand: Brand }) => {
 										</div>
 									</CardContent>
 								</Card>
-								<Card>
-									<CardHeader>
-										<CardTitle>Accent Colors</CardTitle>
-										<CardDescription>
+								<Card brand={brand}>
+									<CardHeader brand={brand}>
+										<CardTitle brand={brand}>Accent Colors</CardTitle>
+										<CardDescription brand={brand}>
 											The accent colors used throughout the design system.
 										</CardDescription>
 									</CardHeader>
