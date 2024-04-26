@@ -1,6 +1,5 @@
 import { Inter, Poppins, Raleway, Work_Sans, DM_Sans } from "next/font/google";
-
-export type Fonts = "Inter" | "Poppins" | "Raleway" | "Work Sans" | "DM Sans";
+import { Fonts } from "./types";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({
@@ -49,4 +48,62 @@ export const fonts = {
 	raleway,
 	work_sans,
 	dm_sans,
+};
+
+export const headingsFont = (font: Fonts) => {
+	switch (font) {
+		case "Inter":
+			return inter;
+		case "Poppins":
+			return poppins;
+		case "Raleway":
+			return raleway;
+		case "Work Sans":
+			return work_sans;
+		case "DM Sans":
+			return dm_sans;
+	}
+};
+
+export const bodyFont = (font: Fonts) => {
+	switch (font) {
+		case "Inter":
+			return inter;
+		case "Poppins":
+			return poppins;
+		case "Raleway":
+			return raleway;
+		case "Work Sans":
+			return work_sans;
+		case "DM Sans":
+			return dm_sans;
+	}
+};
+
+export const headingsWeight = (weight: string) => {
+	switch (weight) {
+		case "normal":
+			return "font-normal";
+		case "medium":
+			return "font-medium";
+		case "semibold":
+			return "font-semibold";
+		case "bold":
+			return "font-bold";
+		case "black":
+			return "font-black";
+	}
+};
+
+export const bodyWeight = (weight: string) => {
+	switch (weight) {
+		case "normal":
+			return "font-normal";
+		case "medium":
+			return "font-medium";
+		case "semibold":
+			return "font-semibold";
+		case "bold":
+			return "font-bold";
+	}
 };
