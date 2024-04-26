@@ -18,7 +18,11 @@ import {
 } from "./ui/card";
 import { cn } from "@/lib/utils";
 import { headingsFont, headingsWeight } from "@/lib/fonts";
-import { getLighterOrDarkerColor, getContrastingColor } from "@/lib/colors";
+import {
+	getLighterOrDarkerColor,
+	getContrastingColor,
+	isLightColor,
+} from "@/lib/colors";
 
 export const DashboardExample = ({ brand }: { brand: Brand }) => {
 	return (
@@ -48,8 +52,13 @@ export const DashboardExample = ({ brand }: { brand: Brand }) => {
 								<DropdownMenuTrigger asChild>
 									<Button
 										style={{
-											color: brand.accentColor,
 											borderColor: brand.accentColor,
+											backgroundColor: isLightColor(brand.accentColor)
+												? "#ffffff"
+												: "#000000",
+											color: isLightColor(brand.accentColor)
+												? "#000000"
+												: "#ffffff",
 										}}
 										className="hover:opacity-80"
 										size="sm"
@@ -69,8 +78,13 @@ export const DashboardExample = ({ brand }: { brand: Brand }) => {
 							</DropdownMenu>
 							<Button
 								style={{
-									color: brand.accentColor,
 									borderColor: brand.accentColor,
+									backgroundColor: isLightColor(brand.accentColor)
+										? "#ffffff"
+										: "#000000",
+									color: isLightColor(brand.accentColor)
+										? "#000000"
+										: "#ffffff",
 								}}
 								className="hover:opacity-80"
 								size="sm"

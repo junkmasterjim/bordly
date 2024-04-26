@@ -427,3 +427,18 @@ export const getContrastingColor = (color: string) => {
 
 	return yiq >= 128 ? "#000000" : "#ffffff";
 };
+
+const getLuma = (color: string) => {
+	const r = parseInt(color.slice(1, 3), 16);
+	const g = parseInt(color.slice(3, 5), 16);
+	const b = parseInt(color.slice(5, 7), 16);
+
+	const yiq = (r * 299 + g * 587 + b * 114) / 1000;
+
+	return yiq;
+};
+
+export const isLightColor = (color: string) => {
+	const luma = getLuma(color);
+	return luma > 0.5;
+};

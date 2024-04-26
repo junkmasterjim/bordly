@@ -1,3 +1,5 @@
+// todo: add function for button backgrounds and text colors and other interactive elements
+
 "use client";
 
 import { useEffect, useState } from "react";
