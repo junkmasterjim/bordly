@@ -54,7 +54,6 @@ const Page = () => {
 			<div className="container flex flex-col gap-4 items-center text-center h-64 pt-20">
 				<span
 					style={{
-						textDecoration: brand.trademark === "true" ? "underline" : "none",
 						textDecorationColor: brand.accentColor,
 					}}
 					className={cn(
@@ -62,11 +61,11 @@ const Page = () => {
 						headingsFont(brand.font.headings.font).className,
 						headingsWeight(brand.font.headings.weight),
 						headingsWeight(brand.font.headings.weight) == "font-black" &&
-							"font-black"
+							"font-black",
+						brand.trademark === "true" && "underline"
 					)}
 				>
-					{brand.name}
-					{brand.trademark == "true" && "™"}
+					{brand.trademark == "true" ? `${brand.name}™` : brand.name}
 				</span>
 
 				<span

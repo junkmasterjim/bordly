@@ -17,12 +17,18 @@ import {
 	CardTitle,
 } from "./ui/card";
 import { cn } from "@/lib/utils";
-import { headingsFont, headingsWeight } from "@/lib/fonts";
+import {
+	bodyFont,
+	bodyWeight,
+	headingsFont,
+	headingsWeight,
+} from "@/lib/fonts";
 import {
 	getLighterOrDarkerColor,
 	getContrastingColor,
 	isLightColor,
 } from "@/lib/colors";
+import { HeadingsCard } from "./headings-card";
 
 export const DashboardExample = ({ brand }: { brand: Brand }) => {
 	return (
@@ -30,7 +36,7 @@ export const DashboardExample = ({ brand }: { brand: Brand }) => {
 			className="px-3 py-2 container border rounded-lg shadow"
 			style={{
 				backgroundColor: brand.backgroundColor,
-				borderColor: getLighterOrDarkerColor(brand.accentColor, 0.5),
+				borderColor: getLighterOrDarkerColor(brand.accentColor, 0.6),
 			}}
 		>
 			<div className="flex min-h-screen">
@@ -108,55 +114,8 @@ export const DashboardExample = ({ brand }: { brand: Brand }) => {
 
 						<TabsContent value="typography">
 							<div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-								<Card
-									style={{
-										backgroundColor: brand.backgroundColor,
-										color: getContrastingColor(brand.backgroundColor),
-									}}
-									className={cn(
-										headingsFont(brand.font.headings.font).className,
-										headingsWeight(brand.font.headings.weight)
-									)}
-								>
-									<CardHeader>
-										<CardTitle>Headings</CardTitle>
-										<CardDescription>
-											The primary headings used throughout the design system.
-										</CardDescription>
-									</CardHeader>
-									<CardContent>
-										<div className="space-y-4">
-											<div>
-												<h1 className="text-4xl font-bold">Heading 1</h1>
-												<p>Used for page titles and hero sections.</p>
-											</div>
-											<div>
-												<h2 className="text-3xl font-bold">Heading 2</h2>
-												<p>Used for section titles and major content blocks.</p>
-											</div>
-											<div>
-												<h3 className="text-2xl font-bold">Heading 3</h3>
-												<p>
-													Used for subsection titles and feature descriptions.
-												</p>
-											</div>
-											<div>
-												<h4 className="text-xl font-bold">Heading 4</h4>
-												<p>
-													Used for card titles and other medium-sized headings.
-												</p>
-											</div>
-											<div>
-												<h5 className="text-lg font-bold">Heading 5</h5>
-												<p>Used for small headings and labels.</p>
-											</div>
-											<div>
-												<h6 className="text-base font-bold">Heading 6</h6>
-												<p>Used for tiny headings and captions.</p>
-											</div>
-										</div>
-									</CardContent>
-								</Card>
+								{/* Headings */}
+								<HeadingsCard brand={brand} />
 
 								<Card>
 									<CardHeader>
