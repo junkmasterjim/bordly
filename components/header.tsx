@@ -180,7 +180,7 @@ export const Header = ({
 									<SelectItem value="medium">Medium</SelectItem>
 									<SelectItem value="semibold">Semibold</SelectItem>
 									<SelectItem value="bold">Bold</SelectItem>
-									<SelectItem value="black">Black</SelectItem>
+									<SelectItem value="extra-bold">Extra Bold</SelectItem>
 								</SelectContent>
 							</Select>
 
