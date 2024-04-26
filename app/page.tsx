@@ -47,7 +47,7 @@ const Page = () => {
 				backgroundColor: brand.backgroundColor,
 				color: getContrastingColor(brand.backgroundColor),
 			}}
-			className={"space-y-4 min-h-screen"}
+			className={"min-h-screen"}
 		>
 			<Header brand={brand} setBrand={setBrand} defaultOpen />
 

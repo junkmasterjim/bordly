@@ -40,7 +40,7 @@ export const Header = ({
 
 			<motion.header
 				className={cn(
-					"shadow overflow-hidden relative z-0",
+					"shadow overflow-hidden relative z-0 bg-background text-foreground",
 					isOpen == true ? "" : "h-0"
 				)}
 				animate={{
