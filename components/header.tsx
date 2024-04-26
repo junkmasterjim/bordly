@@ -10,6 +10,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger } from "./ui/select";
 import { fontsArray } from "@/lib/fonts";
 import { BackgroundColorSelect } from "./background-color-select";
 import { AccentColorSelect } from "./accent-color-select";
+import { motion } from "framer-motion";
 
 export const Header = ({
 	defaultOpen = false,
@@ -26,17 +27,26 @@ export const Header = ({
 		<>
 			<div className="fixed top-4 right-4 z-50">
 				<Button onClick={toggle} size={"icon"} variant={"outline"}>
-					<ChevronDown
-						className={cn("h-4 w-4", isOpen == true ? "rotate-180" : "")}
-					/>
+					<motion.span
+						animate={{
+							rotateX: isOpen ? "180deg" : "0deg",
+							transition: { duration: 0.5, type: "tween" },
+						}}
+					>
+						<ChevronDown className="h-4 w-4" />
+					</motion.span>
 				</Button>
 			</div>
 
-			<header
+			<motion.header
 				className={cn(
 					"shadow overflow-hidden relative z-0",
 					isOpen == true ? "" : "h-0"
 				)}
+				animate={{
+					opacity: isOpen ? 1 : 0,
+					transition: { duration: 0.5, type: "tween" },
+				}}
 			>
 				<div className="container space-y-4 py-4">
 					<div
@@ -211,7 +221,7 @@ export const Header = ({
 						<AccentColorSelect brand={brand} setBrand={setBrand} />
 					</div>
 				</div>
-			</header>
+			</motion.header>
 		</>
 	);
 };
