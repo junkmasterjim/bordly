@@ -156,7 +156,7 @@ export const Header = ({
 							<Select
 								defaultValue={brand.font.headings.weight}
 								onValueChange={(
-									e: "normal" | "medium" | "semibold" | "bold" | "black"
+									e: "normal" | "medium" | "semibold" | "bold" | "extra-bold"
 								) =>
 									setBrand({
 										...brand,
