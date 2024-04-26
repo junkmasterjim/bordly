@@ -58,9 +58,11 @@ const Page = () => {
 						textDecorationColor: brand.accentColor,
 					}}
 					className={cn(
-						"text-7xl font-medium",
+						"text-7xl",
 						headingsFont(brand.font.headings.font).className,
-						headingsWeight(brand.font.headings.weight)
+						headingsWeight(brand.font.headings.weight),
+						headingsWeight(brand.font.headings.weight) == "font-black" &&
+							"font-black"
 					)}
 				>
 					{brand.name}

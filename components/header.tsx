@@ -156,7 +156,7 @@ export const Header = ({
 							<Select
 								defaultValue={brand.font.headings.weight}
 								onValueChange={(
-									e: "normal" | "medium" | "semibold" | "bold" | "extra-bold"
+									e: "normal" | "medium" | "semibold" | "bold" | "black"
 								) =>
 									setBrand({
 										...brand,
@@ -180,7 +180,7 @@ export const Header = ({
 									<SelectItem value="medium">Medium</SelectItem>
 									<SelectItem value="semibold">Semibold</SelectItem>
 									<SelectItem value="bold">Bold</SelectItem>
-									<SelectItem value="extra-bold">Extra Bold</SelectItem>
+									<SelectItem value="black">Black</SelectItem>
 								</SelectContent>
 							</Select>
 

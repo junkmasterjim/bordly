@@ -90,8 +90,8 @@ export const headingsWeight = (weight: string) => {
 			return "font-semibold";
 		case "bold":
 			return "font-bold";
-		case "extra-bold":
-			return "font-extrabold";
+		case "black":
+			return "font-black";
 	}
 };
 

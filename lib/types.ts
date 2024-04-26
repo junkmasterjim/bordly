@@ -10,7 +10,7 @@ export type Brand = {
 	font: {
 		headings: {
 			font: Fonts;
-			weight: "normal" | "medium" | "semibold" | "bold" | "extra-bold";
+			weight: "normal" | "medium" | "semibold" | "bold" | "black";
 		};
 		body: { font: Fonts; weight: "normal" | "medium" | "semibold" | "bold" };
 	};
