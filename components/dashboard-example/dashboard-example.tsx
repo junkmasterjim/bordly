@@ -50,7 +50,7 @@ export const DashboardExample = ({ brand }: { brand: Brand }) => {
 								alt="Bordly"
 								width={200}
 								height={200}
-								className="h-12 w-full object-cover"
+								className="h-12 w-auto object-cover"
 							/>
 							<h1 className="text-2xl font-bold">Bordly</h1>
 						</div>

@@ -53,7 +53,7 @@ export const Header = ({
 							alt="Bordly"
 							width={200}
 							height={200}
-							className="h-16 w-full object-cover select-none pointer-events-none py-2"
+							className="h-16 w-auto object-cover select-none pointer-events-none py-2"
 						/>
 					</span>
 					<span className="flex gap-4 items-center flex-row-reverse">
