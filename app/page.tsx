@@ -11,15 +11,16 @@ import {
 } from "@/lib/fonts";
 import { Brand } from "@/lib/types";
 
-import { DashboardExample } from "@/components/dashboard-example";
+import { DashboardExample } from "@/components/dashboard-example/dashboard-example";
 import { Header } from "@/components/header";
 
 const Page = () => {
 	const [brand, setBrand] = useState<Brand>({
 		name: "Bordly",
+		underline: "true",
 		trademark: "true",
-		description: "build your design system in 5 minutes with bordly",
-		backgroundColor: "#FEFCE8",
+		description: "prototype your design system in 5 minutes with bordly",
+		backgroundColor: "#F0FDFA",
 		mutedColor: "#444444",
 		accentColor: "#CA8A04",
 		font: {
@@ -49,9 +50,9 @@ const Page = () => {
 			}}
 			className={"min-h-screen"}
 		>
-			<Header brand={brand} setBrand={setBrand} defaultOpen />
+			<Header brand={brand} setBrand={setBrand} />
 
-			<div className="container flex flex-col gap-4 items-center text-center h-64 pt-20">
+			<div className="container flex flex-col gap-4 items-center text-center h-64 pt-20 select-none">
 				<span
 					style={{
 						textDecorationColor: brand.accentColor,
@@ -62,7 +63,7 @@ const Page = () => {
 						headingsWeight(brand.font.headings.weight),
 						headingsWeight(brand.font.headings.weight) == "font-black" &&
 							"font-black",
-						brand.trademark === "true" && "underline"
+						brand.underline === "true" && "underline"
 					)}
 				>
 					{brand.trademark == "true" ? `${brand.name}™` : brand.name}

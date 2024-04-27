@@ -6,22 +6,23 @@ import {
 	DropdownMenuTrigger,
 	DropdownMenuItem,
 	DropdownMenuSeparator,
-} from "./ui/dropdown-menu";
-import { Button } from "./ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+} from "../ui/dropdown-menu";
+import { Button } from "../ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import {
 	Card,
 	CardContent,
 	CardDescription,
 	CardHeader,
 	CardTitle,
-} from "./ui/brand-card";
+} from "../ui/brand-card";
 import { getLighterOrDarkerColor, isLightColor } from "@/lib/colors";
 import { DashboardHeadingsCard } from "./dashboard-headings-card";
 import { DashboardBodyCard } from "./dashboard-body-card";
 import { DashboardFontsCard } from "./dashboard-fonts-card";
 
 import { DashboardCopyCard } from "./dashboard-copy-card";
+import Image from "next/image";
 
 export const DashboardExample = ({ brand }: { brand: Brand }) => {
 	return (
@@ -43,7 +44,14 @@ export const DashboardExample = ({ brand }: { brand: Brand }) => {
 								color: brand.accentColor,
 							}}
 						>
-							<Mountain className="h-6 w-6" />
+							<Image
+								unoptimized
+								src="/logorounded.png"
+								alt="Bordly"
+								width={200}
+								height={200}
+								className="h-12 w-full object-cover"
+							/>
 							<h1 className="text-2xl font-bold">Bordly</h1>
 						</div>
 						<div className="flex items-center gap-4">

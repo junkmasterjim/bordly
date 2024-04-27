@@ -5,7 +5,7 @@ import {
 	CardDescription,
 	CardHeader,
 	CardTitle,
-} from "./ui/brand-card";
+} from "../ui/brand-card";
 import { cn } from "@/lib/utils";
 import {
 	bodyFont,
