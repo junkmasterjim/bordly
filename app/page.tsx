@@ -3,10 +3,10 @@
 import { useState } from "react";
 import { Poppins } from "next/font/google";
 
-import { Header } from "@/components/header";
 import { Brand } from "@/lib/types";
 import { EditorDisplay } from "@/components/app-layout/editor-display";
 import { Sidebar } from "@/components/app-layout/sidebar";
+import { Header } from "@/components/app-layout/header";
 
 const poppins = Poppins({
 	subsets: ["latin"],

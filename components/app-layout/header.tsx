@@ -2,12 +2,12 @@
 
 import { Brand } from "@/lib/types";
 import { useState } from "react";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-import { BackgroundColorSelect } from "./background-color-select";
-import { AccentColorSelect } from "./accent-color-select";
+import { BackgroundColorSelect } from "../background-color-select";
+import { AccentColorSelect } from "../accent-color-select";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -24,8 +24,8 @@ export const Header = ({
 	const toggle = () => setIsOpen((prev) => !prev);
 	return (
 		<>
-			<nav className="h-16 bg-background shadow-md border-b">
-				<div className="relative flex items-center justify-between gap-4 px-2">
+			<nav className="h-16 bg-background">
+				<div className="relative flex items-center justify-between gap-4 px-3 shadow">
 					<span className="flex items-center justify-start gap-2">
 						<Image
 							unoptimized
