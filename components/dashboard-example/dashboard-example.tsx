@@ -75,7 +75,7 @@ export const DashboardExample = ({ brand }: { brand: Brand }) => {
 										Settings
 									</Button>
 								</DropdownMenuTrigger>
-								<DropdownMenuContent align="end">
+								<DropdownMenuContent align="start">
 									<DropdownMenuItem>General</DropdownMenuItem>
 									<DropdownMenuItem>Branding</DropdownMenuItem>
 									<DropdownMenuItem>Accessibility</DropdownMenuItem>

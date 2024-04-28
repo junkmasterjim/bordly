@@ -1,20 +1,17 @@
-// todo: add logo input with file upload....
-
 "use client";
 
-import { useEffect, useState } from "react";
-import { getContrastingColor, getMutedColor } from "@/lib/colors";
-import { cn } from "@/lib/utils";
-import {
-	headingsFont,
-	headingsWeight,
-	bodyFont,
-	bodyWeight,
-} from "@/lib/fonts";
-import { Brand } from "@/lib/types";
+import { useState } from "react";
+import { Poppins } from "next/font/google";
 
-import { DashboardExample } from "@/components/dashboard-example/dashboard-example";
 import { Header } from "@/components/header";
+import { Brand } from "@/lib/types";
+import { EditorDisplay } from "@/components/app-layout/editor-display";
+import { Sidebar } from "@/components/app-layout/sidebar";
+
+const poppins = Poppins({
+	subsets: ["latin"],
+	weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 const Page = () => {
 	const [brand, setBrand] = useState<Brand>({
@@ -37,58 +34,16 @@ const Page = () => {
 		},
 	});
 
-	useEffect(() => {
-		const mutedColor = getMutedColor(
-			getContrastingColor(brand.backgroundColor)
-		);
-		if (mutedColor) setBrand({ ...brand, mutedColor });
-	}, [brand.backgroundColor]);
-
 	return (
-		<main
-			style={{
-				backgroundColor: brand.backgroundColor,
-				color: getContrastingColor(brand.backgroundColor),
-			}}
-			className={"min-h-screen"}
-		>
+		<body className={(poppins.className, "overflow-hidden")}>
 			<Header brand={brand} setBrand={setBrand} />
-
-			<div className="container flex flex-col gap-4 items-center text-center h-64 pt-20 select-none">
-				<span
-					style={{
-						textDecorationColor: brand.accentColor,
-					}}
-					className={cn(
-						"text-7xl",
-						headingsFont(brand.font.headings.font).className,
-						headingsWeight(brand.font.headings.weight),
-						headingsWeight(brand.font.headings.weight) == "font-black" &&
-							"font-black",
-						brand.underline === "true" && "underline"
-					)}
-				>
-					{brand.trademark == "true" ? `${brand.name}™` : brand.name}
-				</span>
-
-				<span
-					style={{
-						color: brand.mutedColor,
-					}}
-					className={cn(
-						"text-2xl font-medium",
-						bodyFont(brand.font.body.font).className,
-						bodyWeight(brand.font.body.weight)
-					)}
-				>
-					{brand.description}
-				</span>
+			<div className="flex w-full h-svh">
+				{/* Sidebar */}
+				<Sidebar brand={brand} setBrand={setBrand} />
+				{/* Editor Display */}
+				<EditorDisplay brand={brand} setBrand={setBrand} />
 			</div>
-
-			<DashboardExample brand={brand} />
-			<div className="py-24" />
-		</main>
+		</body>
 	);
 };
-
 export default Page;

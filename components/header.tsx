@@ -10,11 +10,6 @@ import { BackgroundColorSelect } from "./background-color-select";
 import { AccentColorSelect } from "./accent-color-select";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { HeadingsDropdown } from "./controls/headings-dropdown";
-import { WeightsDropdown } from "./controls/weights-dropdown";
-import { TMToggle } from "./controls/tm-toggle";
-import { UnderlineToggle } from "./controls/underline-toggle";
-import { FontsDropdown } from "./controls/fonts-dropdown";
 
 export const Header = ({
 	defaultOpen = false,
@@ -29,8 +24,8 @@ export const Header = ({
 	const toggle = () => setIsOpen((prev) => !prev);
 	return (
 		<>
-			<nav className="top-0 left-0 right-0 z-50 h-16 bg-background shadow-md">
-				<div className="container relative flex items-center justify-between gap-4">
+			<nav className="h-16 bg-background shadow-md border-b">
+				<div className="relative flex items-center justify-between gap-4 px-2">
 					<span className="flex items-center justify-start gap-2">
 						<Image
 							unoptimized
@@ -40,14 +35,16 @@ export const Header = ({
 							height={200}
 							className="h-16 w-auto object-cover select-none pointer-events-none py-2"
 						/>
-						<span className="font-bold text-xs flex items-center justify-end gap-2">
-							(Not optimized for mobile) Use the controls to customize your
-							brand. <ArrowRight className="h-4 w-4" />
+						<span className="font-bold text-xs">
+							(Not optimized for mobile)
 						</span>
 					</span>
 
-					<span className="flex gap-4 items-center flex-row-reverse">
+					<span className="flex gap-4 items-center">
 						{/* Toggle */}
+						<div className="font-bold text-sm mr-2 inline-flex items-center gap-2">
+							Colors <ArrowRight className="h-4 w-4" />
+						</div>
 						<div className="size-8">
 							<div className="absolute top-3 right-4 z-50">
 								<Button onClick={toggle} size={"icon"} variant={"outline"}>
@@ -61,15 +58,6 @@ export const Header = ({
 									</motion.span>
 								</Button>
 							</div>
-						</div>
-
-						{/* Controls */}
-						<div className="flex items-center gap-4">
-							<HeadingsDropdown brand={brand} setBrand={setBrand} />
-							<FontsDropdown brand={brand} setBrand={setBrand} />
-							<WeightsDropdown brand={brand} setBrand={setBrand} />
-							<TMToggle brand={brand} setBrand={setBrand} />
-							<UnderlineToggle brand={brand} setBrand={setBrand} />
 						</div>
 					</span>
 				</div>

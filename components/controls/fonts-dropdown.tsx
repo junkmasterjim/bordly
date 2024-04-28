@@ -10,23 +10,31 @@ import {
 import { ALargeSmall } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger } from "../ui/select";
 import { Button } from "../ui/button";
-import { fontsArray } from "@/lib/fonts";
+import { bodyWeight, fontsArray, headingsWeight } from "@/lib/fonts";
+import { cn } from "@/lib/utils";
 
 export const FontsDropdown = ({
 	brand,
 	setBrand,
+	className,
 }: {
 	brand: Brand;
 	setBrand: React.Dispatch<React.SetStateAction<Brand>>;
+	className?: string;
 }) => {
 	return (
 		<DropdownMenu>
-			<DropdownMenuTrigger className="hover:bg-muted hover:text-muted-foreground size-9 rounded inline-flex items-center justify-center">
+			<DropdownMenuTrigger
+				className={cn(
+					"hover:bg-muted hover:text-muted-foreground size-9 rounded inline-flex items-center justify-center",
+					className
+				)}
+			>
 				<ALargeSmall strokeWidth={2.25} className="size-6" />
 			</DropdownMenuTrigger>
 			<DropdownMenuContent
 				className="px-2 py-2 space-y-2 rounded-md"
-				align="end"
+				align="start"
 			>
 				<span className="flex items-center justify-center text-sm font-semibold select-none">
 					Font Family
@@ -50,12 +58,29 @@ export const FontsDropdown = ({
 				>
 					<Button variant={"ghost"} asChild className="p-0.5">
 						<SelectTrigger className="border-none justify-between px-2">
-							Headings: {brand.font.headings.font}
+							<span>
+								Headings:
+								<span
+									className={cn(
+										headingsWeight(brand.font.headings.weight),
+										fontsArray.find(
+											(font) => font.name == brand.font.headings.font
+										)?.font.className,
+										"ml-1"
+									)}
+								>
+									{brand.font.headings.font}
+								</span>
+							</span>
 						</SelectTrigger>
 					</Button>
 					<SelectContent className="max-w-xs">
 						{fontsArray.map((font) => (
-							<SelectItem key={font.name} value={font.name}>
+							<SelectItem
+								key={font.name}
+								value={font.name}
+								className={font.font.className}
+							>
 								{font.name}
 							</SelectItem>
 						))}
@@ -79,12 +104,28 @@ export const FontsDropdown = ({
 				>
 					<Button variant={"ghost"} asChild className="p-0.5">
 						<SelectTrigger className="border-none justify-between px-2">
-							Body: {brand.font.body.font}
+							<span>
+								Body:
+								<span
+									className={cn(
+										fontsArray.find((font) => font.name == brand.font.body.font)
+											?.font.className,
+										bodyWeight(brand.font.body.weight),
+										"ml-1"
+									)}
+								>
+									{brand.font.body.font}
+								</span>
+							</span>
 						</SelectTrigger>
 					</Button>
 					<SelectContent className="max-w-xs">
 						{fontsArray.map((font) => (
-							<SelectItem key={font.name} value={font.name}>
+							<SelectItem
+								key={font.name}
+								value={font.name}
+								className={font.font.className}
+							>
 								{font.name}
 							</SelectItem>
 						))}
