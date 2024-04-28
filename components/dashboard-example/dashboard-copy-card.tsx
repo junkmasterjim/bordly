@@ -43,7 +43,7 @@ export const DashboardCopyCard = ({ brand }: { brand: Brand }) => {
 									headingsWeight(brand.font.headings.weight)
 								)}
 								style={{
-									color: brand.mutedColor,
+									color: brand.colors.foreground,
 								}}
 							>
 								Don't worry, we'll keep it brief
@@ -55,7 +55,7 @@ export const DashboardCopyCard = ({ brand }: { brand: Brand }) => {
 									bodyWeight(brand.font.body.weight)
 								)}
 								style={{
-									color: brand.mutedColor,
+									color: brand.colors.foreground,
 								}}
 							>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

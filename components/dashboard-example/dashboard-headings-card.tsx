@@ -26,9 +26,9 @@ export const DashboardHeadingsCard = ({
 		<Card
 			brand={brand}
 			style={{
-				backgroundColor: brand.backgroundColor,
-				borderColor: getLighterOrDarkerColor(brand.accentColor, 0.5),
-				color: getContrastingColor(brand.backgroundColor),
+				backgroundColor: brand.colors.background,
+				borderColor: getLighterOrDarkerColor(brand.colors.accent, 0.5),
+				color: getContrastingColor(brand.colors.background),
 			}}
 			className={cn(
 				"shadow",
@@ -41,7 +41,7 @@ export const DashboardHeadingsCard = ({
 				brand={brand}
 				className="border-b mb-4"
 				style={{
-					borderColor: getLighterOrDarkerColor(brand.accentColor, 0.5),
+					borderColor: getLighterOrDarkerColor(brand.colors.accent, 0.5),
 				}}
 			>
 				<CardTitle
@@ -56,7 +56,7 @@ export const DashboardHeadingsCard = ({
 				<CardDescription
 					brand={brand}
 					style={{
-						color: brand.mutedColor,
+						color: brand.colors.foreground,
 					}}
 					className={cn(
 						bodyFont(brand.font.body.font),

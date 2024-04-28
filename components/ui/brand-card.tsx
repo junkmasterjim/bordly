@@ -18,9 +18,9 @@ const Card = React.forwardRef<
 >(({ brand, className, ...props }, ref) => (
 	<div
 		style={{
-			backgroundColor: brand.backgroundColor,
-			borderColor: getLighterOrDarkerColor(brand.accentColor, 0.5),
-			color: getContrastingColor(brand.backgroundColor),
+			backgroundColor: brand.colors.background,
+			borderColor: getLighterOrDarkerColor(brand.colors.accent, 0.5),
+			color: getContrastingColor(brand.colors.background),
 		}}
 		ref={ref}
 		className={cn(
@@ -40,7 +40,7 @@ const CardHeader = React.forwardRef<
 >(({ brand, className, ...props }, ref) => (
 	<div
 		style={{
-			borderColor: getLighterOrDarkerColor(brand.accentColor, 0.5),
+			borderColor: getLighterOrDarkerColor(brand.colors.accent, 0.5),
 		}}
 		ref={ref}
 		className={cn("flex flex-col space-y-1.5 p-6 border-b mb-4", className)}
@@ -57,7 +57,7 @@ const CardTitle = React.forwardRef<
 >(({ brand, className, ...props }, ref) => (
 	<h3
 		style={{
-			color: getContrastingColor(brand.backgroundColor),
+			color: getContrastingColor(brand.colors.background),
 		}}
 		ref={ref}
 		className={cn(
@@ -79,7 +79,8 @@ const CardDescription = React.forwardRef<
 >(({ brand, className, ...props }, ref) => (
 	<p
 		style={{
-			color: brand.mutedColor,
+			color: brand.colors.foreground,
+			opacity: 0.7,
 		}}
 		ref={ref}
 		className={cn(

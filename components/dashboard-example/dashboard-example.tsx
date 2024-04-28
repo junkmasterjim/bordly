@@ -29,8 +29,8 @@ export const DashboardExample = ({ brand }: { brand: Brand }) => {
 		<div
 			className="px-3 py-2 container border rounded-lg shadow"
 			style={{
-				backgroundColor: brand.backgroundColor,
-				borderColor: getLighterOrDarkerColor(brand.accentColor, 0.6),
+				backgroundColor: brand.colors.background,
+				borderColor: getLighterOrDarkerColor(brand.colors.accent, 0.6),
 			}}
 		>
 			<div className="flex">
@@ -41,7 +41,7 @@ export const DashboardExample = ({ brand }: { brand: Brand }) => {
 						<div
 							className="flex items-center gap-4"
 							style={{
-								color: brand.accentColor,
+								color: brand.colors.accent,
 							}}
 						>
 							<Image
@@ -62,11 +62,11 @@ export const DashboardExample = ({ brand }: { brand: Brand }) => {
 								<DropdownMenuTrigger asChild>
 									<Button
 										style={{
-											borderColor: brand.accentColor,
-											backgroundColor: isLightColor(brand.accentColor)
+											borderColor: brand.colors.accent,
+											backgroundColor: isLightColor(brand.colors.accent)
 												? "#ffffff"
 												: "#000000",
-											color: isLightColor(brand.accentColor)
+											color: isLightColor(brand.colors.accent)
 												? "#000000"
 												: "#ffffff",
 										}}
@@ -88,11 +88,11 @@ export const DashboardExample = ({ brand }: { brand: Brand }) => {
 							</DropdownMenu>
 							<Button
 								style={{
-									borderColor: brand.accentColor,
-									backgroundColor: isLightColor(brand.accentColor)
+									borderColor: brand.colors.accent,
+									backgroundColor: isLightColor(brand.colors.accent)
 										? "#ffffff"
 										: "#000000",
-									color: isLightColor(brand.accentColor)
+									color: isLightColor(brand.colors.accent)
 										? "#000000"
 										: "#ffffff",
 								}}

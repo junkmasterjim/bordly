@@ -1,10 +1,6 @@
 "use client";
 
-import {
-	getContrastingColor,
-	getLighterOrDarkerColor,
-	getMutedColor,
-} from "@/lib/colors";
+import { getContrastingColor } from "@/lib/colors";
 import {
 	bodyFont,
 	bodyWeight,
@@ -13,7 +9,6 @@ import {
 } from "@/lib/fonts";
 import { Brand } from "@/lib/types";
 import { cn } from "@/lib/utils";
-import { useEffect } from "react";
 import { DashboardExample } from "../dashboard-example/dashboard-example";
 
 export const EditorDisplay = ({
@@ -23,24 +18,18 @@ export const EditorDisplay = ({
 	brand: Brand;
 	setBrand: React.Dispatch<React.SetStateAction<Brand>>;
 }) => {
-	useEffect(() => {
-		const mutedColor = getMutedColor(
-			getContrastingColor(brand.backgroundColor)
-		);
-		if (mutedColor) setBrand({ ...brand, mutedColor });
-	}, [brand.backgroundColor]);
 	return (
 		<main
 			style={{
-				backgroundColor: brand.backgroundColor,
-				color: getContrastingColor(brand.backgroundColor),
+				backgroundColor: brand.colors.background,
+				color: getContrastingColor(brand.colors.background),
 			}}
 			className={"overflow-auto max-h-screen px-4 w-full"}
 		>
 			<div className="container flex flex-col gap-4 items-center text-center h-64 pt-20 ">
 				<span
 					style={{
-						textDecorationColor: brand.accentColor,
+						textDecorationColor: brand.colors.accent,
 					}}
 					className={cn(
 						"text-7xl",
@@ -56,7 +45,7 @@ export const EditorDisplay = ({
 
 				<span
 					style={{
-						color: getContrastingColor(brand.backgroundColor),
+						color: getContrastingColor(brand.colors.background),
 						opacity: 0.7,
 					}}
 					className={cn(

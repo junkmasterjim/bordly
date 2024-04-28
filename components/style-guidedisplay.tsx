@@ -7,7 +7,6 @@ import {
 } from "@/lib/fonts";
 import { Brand } from "@/lib/types";
 import { cn } from "@/lib/utils";
-import { color } from "framer-motion";
 
 export const StyleGuideDisplay = ({ brand }: { brand: Brand }) => {
 	const fontClasses = {

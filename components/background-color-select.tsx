@@ -94,7 +94,10 @@ export const BackgroundColorSelect = ({
 									// color: getContrastingColor(color.hex),
 								}}
 								onClick={() =>
-									setBrand({ ...brand, backgroundColor: color.hex })
+									setBrand({
+										...brand,
+										colors: { ...brand.colors, background: color.hex },
+									})
 								}
 								className="aspect-[4/3] w-8 cursor-pointer shadow border-none"
 							/>
