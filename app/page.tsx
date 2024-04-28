@@ -43,9 +43,7 @@ const Page = () => {
 		<body className={(poppins.className, "overflow-hidden")}>
 			<Header brand={brand} setBrand={setBrand} />
 			<div className="flex w-full h-svh">
-				{/* Sidebar */}
 				<Sidebar brand={brand} setBrand={setBrand} />
-				{/* Editor Display */}
 				{/* <EditorDisplay brand={brand} setBrand={setBrand} /> */}
 				<StyleGuideDisplay brand={brand} />
 			</div>
