@@ -366,32 +366,7 @@ const StyleGuideBodyTypography = ({ brand }: { brand: Brand }) => {
 				>
 					12345678910
 				</p>
-				<div
-					className={cn("mt-6", fontClasses.body.font, fontClasses.body.weight)}
-				>
-					<h4
-						className={cn(
-							fontClasses.headings.font,
-							fontClasses.headings.weight
-						)}
-					>
-						HEADER TEXT WEIGHT
-					</h4>
-					<p className="text-5xl mt-2">Aa</p>
-				</div>
-				<div
-					className={cn("mt-6", fontClasses.body.font, fontClasses.body.weight)}
-				>
-					<h4
-						className={cn(
-							fontClasses.headings.font,
-							fontClasses.headings.weight
-						)}
-					>
-						SUB HEADER TEXT WEIGHT
-					</h4>
-					<p className="text-4xl mt-2">Aa</p>
-				</div>
+
 				<div className="mt-6">
 					<h4
 						className={cn(
