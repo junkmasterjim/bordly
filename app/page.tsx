@@ -7,6 +7,7 @@ import { Brand } from "@/lib/types";
 import { EditorDisplay } from "@/components/app-layout/editor-display";
 import { Sidebar } from "@/components/app-layout/sidebar";
 import { Header } from "@/components/app-layout/header";
+import { StyleGuideDisplay } from "@/components/style-guide\u0015display";
 
 const poppins = Poppins({
 	subsets: ["latin"],
@@ -19,9 +20,13 @@ const Page = () => {
 		underline: "true",
 		trademark: "true",
 		description: "prototype your design system in 5 minutes with bordly",
-		backgroundColor: "#F0FDFA",
-		mutedColor: "#444444",
-		accentColor: "#CA8A04",
+		colors: {
+			primary: "#2D95EC",
+			secondary: "#666666",
+			accent: "#A0A0A0",
+			background: "#F8F8F8",
+			foreground: "#181818",
+		},
 		font: {
 			headings: {
 				font: "Poppins",
@@ -41,7 +46,8 @@ const Page = () => {
 				{/* Sidebar */}
 				<Sidebar brand={brand} setBrand={setBrand} />
 				{/* Editor Display */}
-				<EditorDisplay brand={brand} setBrand={setBrand} />
+				{/* <EditorDisplay brand={brand} setBrand={setBrand} /> */}
+				<StyleGuideDisplay brand={brand} />
 			</div>
 		</body>
 	);

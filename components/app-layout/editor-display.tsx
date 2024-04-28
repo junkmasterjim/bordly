@@ -1,6 +1,10 @@
 "use client";
 
-import { getContrastingColor, getMutedColor } from "@/lib/colors";
+import {
+	getContrastingColor,
+	getLighterOrDarkerColor,
+	getMutedColor,
+} from "@/lib/colors";
 import {
 	bodyFont,
 	bodyWeight,
@@ -52,7 +56,8 @@ export const EditorDisplay = ({
 
 				<span
 					style={{
-						color: brand.mutedColor,
+						color: getContrastingColor(brand.backgroundColor),
+						opacity: 0.7,
 					}}
 					className={cn(
 						"text-2xl font-medium",

@@ -52,7 +52,10 @@ export const DashboardExample = ({ brand }: { brand: Brand }) => {
 								height={200}
 								className="h-12 w-auto object-cover"
 							/>
-							<h1 className="text-2xl font-bold">Bordly</h1>
+							<h1 className={"text-2xl font-bold"}>
+								{brand.name}
+								<span>{brand.trademark == "true" ? "™" : ""}</span>
+							</h1>
 						</div>
 						<div className="flex items-center gap-4">
 							<DropdownMenu>

@@ -1,4 +1,13 @@
-import { Inter, Poppins, Raleway, Work_Sans, DM_Sans } from "next/font/google";
+import {
+	Inter,
+	Poppins,
+	Raleway,
+	Work_Sans,
+	DM_Sans,
+	Montserrat,
+	Merriweather,
+	Playfair_Display,
+} from "next/font/google";
 import { Fonts } from "./types";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,6 +26,18 @@ const work_sans = Work_Sans({
 const dm_sans = DM_Sans({
 	subsets: ["latin"],
 	display: "swap",
+});
+const montserrat = Montserrat({
+	subsets: ["latin"],
+	weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+const merriweather = Merriweather({
+	subsets: ["latin"],
+	weight: ["300", "400", "900", "700"],
+});
+const playfair_display = Playfair_Display({
+	subsets: ["latin"],
+	weight: ["600", "800", "400", "500", "700", "900"],
 });
 
 export const fontsArray = [
@@ -40,6 +61,18 @@ export const fontsArray = [
 		name: "DM Sans",
 		font: dm_sans,
 	},
+	{
+		name: "Montserrat",
+		font: montserrat,
+	},
+	{
+		name: "Merriweather",
+		font: merriweather,
+	},
+	{
+		name: "Playfair Display",
+		font: playfair_display,
+	},
 ];
 
 export const fonts = {
@@ -48,6 +81,9 @@ export const fonts = {
 	raleway,
 	work_sans,
 	dm_sans,
+	montserrat,
+	merriweather,
+	playfair_display,
 };
 
 export const headingsFont = (font: Fonts) => {
@@ -62,6 +98,12 @@ export const headingsFont = (font: Fonts) => {
 			return work_sans;
 		case "DM Sans":
 			return dm_sans;
+		case "Montserrat":
+			return montserrat;
+		case "Merriweather":
+			return merriweather;
+		case "Playfair Display":
+			return playfair_display;
 	}
 };
 
@@ -77,6 +119,12 @@ export const bodyFont = (font: Fonts) => {
 			return work_sans;
 		case "DM Sans":
 			return dm_sans;
+		case "Montserrat":
+			return montserrat;
+		case "Merriweather":
+			return merriweather;
+		case "Playfair Display":
+			return playfair_display;
 	}
 };
 

@@ -5,6 +5,7 @@ import { Key, useState } from "react";
 import { Card, CardContent, CardHeader } from "./ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger } from "./ui/select";
 import { colors, getContrastingColor } from "@/lib/colors";
+import { cn } from "@/lib/utils";
 
 export const BackgroundColorSelect = ({
 	className,
@@ -34,43 +35,51 @@ export const BackgroundColorSelect = ({
 						</div>
 					</SelectTrigger>
 					<SelectContent className="max-w-xs">
-						<SelectItem value="50">
-							<span className="flex gap-2 items-center">
-								<div className="size-4 rounded bg-neutral-50" />
-								50
-							</span>
-						</SelectItem>
-						<SelectItem value="200">
-							<span className="flex gap-2 items-center">
-								<div className="size-4 rounded bg-neutral-200" />
-								200
-							</span>
-						</SelectItem>
-						<SelectItem value="400">
-							<span className="flex gap-2 items-center">
-								<div className="size-4 rounded bg-neutral-400" />
-								400
-							</span>
-						</SelectItem>
-						<SelectItem value="600">
-							<span className="flex gap-2 items-center">
-								<div className="size-4 rounded bg-neutral-600" />
-								600
-							</span>
-						</SelectItem>
-						<SelectItem value="800">
-							<span className="flex gap-2 items-center">
-								<div className="size-4 rounded bg-neutral-800" />
-								800
-							</span>
-						</SelectItem>
-
-						<SelectItem value="950">
-							<span className="flex gap-2 items-center">
-								<div className="size-4 rounded bg-neutral-950" />
-								950
-							</span>
-						</SelectItem>
+						{[
+							"50",
+							"100",
+							"200",
+							"300",
+							"400",
+							"500",
+							"600",
+							"700",
+							"800",
+							"900",
+							"950",
+						].map((grade) => (
+							<SelectItem key={grade} value={grade} className={grade}>
+								<span className="flex gap-2 items-center">
+									<div
+										className={cn(
+											"size-4 rounded shadow",
+											grade == "50"
+												? "bg-neutral-50"
+												: grade == "100"
+												? "bg-neutral-100"
+												: grade == "200"
+												? "bg-neutral-200"
+												: grade == "300"
+												? "bg-neutral-300"
+												: grade == "400"
+												? "bg-neutral-400"
+												: grade == "500"
+												? "bg-neutral-500"
+												: grade == "600"
+												? "bg-neutral-600"
+												: grade == "700"
+												? "bg-neutral-700"
+												: grade == "800"
+												? "bg-neutral-800"
+												: grade == "900"
+												? "bg-neutral-900"
+												: "bg-neutral-950"
+										)}
+									/>
+									{grade}
+								</span>
+							</SelectItem>
+						))}
 					</SelectContent>
 				</Select>
 			</CardHeader>

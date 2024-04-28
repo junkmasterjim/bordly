@@ -97,6 +97,104 @@ export const colors = {
 			hex: "#FFFFFF",
 		},
 	],
+	100: [
+		{
+			bgColor: "bg-red-100",
+			hex: "#FEE2E2",
+		},
+		{
+			bgColor: "bg-orange-100",
+			hex: "#FFEDD5",
+		},
+		{
+			bgColor: "bg-amber-100",
+			hex: "#FEF3C7",
+		},
+		{
+			bgColor: "bg-yellow-100",
+			hex: "#FEF9C3",
+		},
+		{
+			bgColor: "bg-lime-100",
+			hex: "#ECFCCB",
+		},
+		{
+			bgColor: "bg-green-100",
+			hex: "#DCFCE7",
+		},
+		{
+			bgColor: "bg-emerald-100",
+			hex: "#D1FAE5",
+		},
+		{
+			bgColor: "bg-teal-100",
+			hex: "#CCFBF1",
+		},
+		{
+			bgColor: "bg-cyan-100",
+			hex: "#CFFAFE",
+		},
+		{
+			bgColor: "bg-sky-100",
+			hex: "#E0F2FE",
+		},
+		{
+			bgColor: "bg-blue-100",
+			hex: "#DBEAFE",
+		},
+		{
+			bgColor: "bg-indigo-100",
+			hex: "#E0E7FF",
+		},
+		{
+			bgColor: "bg-violet-100",
+			hex: "#EDE9FE",
+		},
+		{
+			bgColor: "bg-purple-100",
+			hex: "#F3E8FF",
+		},
+		{
+			bgColor: "bg-fuchsia-100",
+			hex: "#FAE8FF",
+		},
+		{
+			bgColor: "bg-pink-100",
+			hex: "#FCE7F3",
+		},
+		{
+			bgColor: "bg-rose-100",
+			hex: "#FFE4E6",
+		},
+		{
+			bgColor: "bg-stone-100",
+			hex: "#F5F5F4",
+		},
+		{
+			bgColor: "bg-neutral-100",
+			hex: "#F5F5F5",
+		},
+		{
+			bgColor: "bg-zinc-100",
+			hex: "#F4F4F5",
+		},
+		{
+			bgColor: "bg-gray-100",
+			hex: "#F3F4F6",
+		},
+		{
+			bgColor: "bg-slate-100",
+			hex: "#F1F5F9",
+		},
+		{
+			bgColor: "bg-black",
+			hex: "#000000",
+		},
+		{
+			bgColor: "bg-white",
+			hex: "#FFFFFF",
+		},
+	],
 	200: [
 		{
 			bgColor: "bg-red-200",
@@ -185,6 +283,104 @@ export const colors = {
 		{
 			bgColor: "bg-slate-200",
 			hex: "#E2E8F0",
+		},
+		{
+			bgColor: "bg-black",
+			hex: "#000000",
+		},
+		{
+			bgColor: "bg-white",
+			hex: "#FFFFFF",
+		},
+	],
+	300: [
+		{
+			bgColor: "bg-red-300",
+			hex: "#FCA5A5",
+		},
+		{
+			bgColor: "bg-orange-300",
+			hex: "#FDBA74",
+		},
+		{
+			bgColor: "bg-amber-300",
+			hex: "#FCD34D",
+		},
+		{
+			bgColor: "bg-yellow-300",
+			hex: "#FDE047",
+		},
+		{
+			bgColor: "bg-lime-300",
+			hex: "#BEF264",
+		},
+		{
+			bgColor: "bg-green-300",
+			hex: "#86EFAC",
+		},
+		{
+			bgColor: "bg-emerald-300",
+			hex: "#6EE7B7",
+		},
+		{
+			bgColor: "bg-teal-300",
+			hex: "#5EEAD4",
+		},
+		{
+			bgColor: "bg-cyan-300",
+			hex: "#67E8F9",
+		},
+		{
+			bgColor: "bg-sky-300",
+			hex: "#7DD3FC",
+		},
+		{
+			bgColor: "bg-blue-300",
+			hex: "#93C5FD",
+		},
+		{
+			bgColor: "bg-indigo-300",
+			hex: "#A5B4FC",
+		},
+		{
+			bgColor: "bg-violet-300",
+			hex: "#C4B5FD",
+		},
+		{
+			bgColor: "bg-purple-300",
+			hex: "#D8B4FE",
+		},
+		{
+			bgColor: "bg-fuchsia-300",
+			hex: "#F0ABFC",
+		},
+		{
+			bgColor: "bg-pink-300",
+			hex: "#F9A8D4",
+		},
+		{
+			bgColor: "bg-rose-300",
+			hex: "#FDA4AF",
+		},
+		{
+			bgColor: "bg-stone-300",
+			hex: "#D6D3D1",
+		},
+		{
+			bgColor: "bg-neutral-300",
+			hex: "#D4D4D4",
+		},
+		{
+			bgColor: "bg-zinc-300",
+			hex: "#D4D4D8",
+		},
+		{
+			bgColor: "bg-gray-300",
+			hex: "#D1D5DB",
+		},
+		{
+			bgColor: "bg-slate-300",
+			hex: "#CBD5E1",
 		},
 		{
 			bgColor: "bg-black",
@@ -293,6 +489,104 @@ export const colors = {
 			hex: "#FFFFFF",
 		},
 	],
+	500: [
+		{
+			bgColor: "bg-red-500",
+			hex: "#EF4444",
+		},
+		{
+			bgColor: "bg-orange-500",
+			hex: "#F97316",
+		},
+		{
+			bgColor: "bg-amber-500",
+			hex: "#F59E0B",
+		},
+		{
+			bgColor: "bg-yellow-500",
+			hex: "#EAB308",
+		},
+		{
+			bgColor: "bg-lime-500",
+			hex: "#84CC16",
+		},
+		{
+			bgColor: "bg-green-500",
+			hex: "#22C55E",
+		},
+		{
+			bgColor: "bg-emerald-500",
+			hex: "#10B981",
+		},
+		{
+			bgColor: "bg-teal-500",
+			hex: "#14B8A6",
+		},
+		{
+			bgColor: "bg-cyan-500",
+			hex: "#06B6D4",
+		},
+		{
+			bgColor: "bg-sky-500",
+			hex: "#0EA5E9",
+		},
+		{
+			bgColor: "bg-blue-500",
+			hex: "#3B82F6",
+		},
+		{
+			bgColor: "bg-indigo-500",
+			hex: "#6366F1",
+		},
+		{
+			bgColor: "bg-violet-500",
+			hex: "#8B5CF6",
+		},
+		{
+			bgColor: "bg-purple-500",
+			hex: "#A855F7",
+		},
+		{
+			bgColor: "bg-fuchsia-500",
+			hex: "#D946EF",
+		},
+		{
+			bgColor: "bg-pink-500",
+			hex: "#EC4899",
+		},
+		{
+			bgColor: "bg-rose-500",
+			hex: "#F43F5E",
+		},
+		{
+			bgColor: "bg-stone-500",
+			hex: "#78716C",
+		},
+		{
+			bgColor: "bg-neutral-500",
+			hex: "#737373",
+		},
+		{
+			bgColor: "bg-zinc-500",
+			hex: "#71717A",
+		},
+		{
+			bgColor: "bg-gray-500",
+			hex: "#6B7280",
+		},
+		{
+			bgColor: "bg-slate-500",
+			hex: "#64748B",
+		},
+		{
+			bgColor: "bg-black",
+			hex: "#000000",
+		},
+		{
+			bgColor: "bg-white",
+			hex: "#FFFFFF",
+		},
+	],
 	600: [
 		{
 			bgColor: "bg-red-600",
@@ -391,6 +685,104 @@ export const colors = {
 			hex: "#FFFFFF",
 		},
 	],
+	700: [
+		{
+			bgColor: "bg-red-700",
+			hex: "#B91C1C",
+		},
+		{
+			bgColor: "bg-orange-700",
+			hex: "#C2410C",
+		},
+		{
+			bgColor: "bg-amber-700",
+			hex: "#B45309",
+		},
+		{
+			bgColor: "bg-yellow-700",
+			hex: "#A16207",
+		},
+		{
+			bgColor: "bg-lime-700",
+			hex: "#4D7C0F",
+		},
+		{
+			bgColor: "bg-green-700",
+			hex: "#15803D",
+		},
+		{
+			bgColor: "bg-emerald-700",
+			hex: "#047857",
+		},
+		{
+			bgColor: "bg-teal-700",
+			hex: "#0F766E",
+		},
+		{
+			bgColor: "bg-cyan-700",
+			hex: "#0E7490",
+		},
+		{
+			bgColor: "bg-sky-700",
+			hex: "#0369A1",
+		},
+		{
+			bgColor: "bg-blue-700",
+			hex: "#1D4ED8",
+		},
+		{
+			bgColor: "bg-indigo-700",
+			hex: "#4338CA",
+		},
+		{
+			bgColor: "bg-violet-700",
+			hex: "#6D28D9",
+		},
+		{
+			bgColor: "bg-purple-700",
+			hex: "#7E22CE",
+		},
+		{
+			bgColor: "bg-fuchsia-700",
+			hex: "#A21CAF",
+		},
+		{
+			bgColor: "bg-pink-700",
+			hex: "#BE185D",
+		},
+		{
+			bgColor: "bg-rose-700",
+			hex: "#BE123C",
+		},
+		{
+			bgColor: "bg-stone-700",
+			hex: "#44403C",
+		},
+		{
+			bgColor: "bg-neutral-700",
+			hex: "#404040",
+		},
+		{
+			bgColor: "bg-zinc-700",
+			hex: "#3F3F46",
+		},
+		{
+			bgColor: "bg-gray-700",
+			hex: "#374151",
+		},
+		{
+			bgColor: "bg-slate-700",
+			hex: "#334155",
+		},
+		{
+			bgColor: "bg-black",
+			hex: "#000000",
+		},
+		{
+			bgColor: "bg-white",
+			hex: "#FFFFFF",
+		},
+	],
 	800: [
 		{
 			bgColor: "bg-red-800",
@@ -479,6 +871,104 @@ export const colors = {
 		{
 			bgColor: "bg-slate-800",
 			hex: "#1E293B",
+		},
+		{
+			bgColor: "bg-black",
+			hex: "#000000",
+		},
+		{
+			bgColor: "bg-white",
+			hex: "#FFFFFF",
+		},
+	],
+	900: [
+		{
+			bgColor: "bg-red-900",
+			hex: "#7F1D1D",
+		},
+		{
+			bgColor: "bg-orange-900",
+			hex: "#7C2D12",
+		},
+		{
+			bgColor: "bg-amber-900",
+			hex: "#78350F",
+		},
+		{
+			bgColor: "bg-yellow-900",
+			hex: "#713F12",
+		},
+		{
+			bgColor: "bg-lime-900",
+			hex: "#365314",
+		},
+		{
+			bgColor: "bg-green-900",
+			hex: "#14532D",
+		},
+		{
+			bgColor: "bg-emerald-900",
+			hex: "#064E3B",
+		},
+		{
+			bgColor: "bg-teal-900",
+			hex: "#134E4A",
+		},
+		{
+			bgColor: "bg-cyan-900",
+			hex: "#164E63",
+		},
+		{
+			bgColor: "bg-sky-900",
+			hex: "#0C4A6E",
+		},
+		{
+			bgColor: "bg-blue-900",
+			hex: "#1E3A8A",
+		},
+		{
+			bgColor: "bg-indigo-900",
+			hex: "#312E81",
+		},
+		{
+			bgColor: "bg-violet-900",
+			hex: "#4C1D95",
+		},
+		{
+			bgColor: "bg-purple-900",
+			hex: "#581C87",
+		},
+		{
+			bgColor: "bg-fuchsia-900",
+			hex: "#701A75",
+		},
+		{
+			bgColor: "bg-pink-900",
+			hex: "#831843",
+		},
+		{
+			bgColor: "bg-rose-900",
+			hex: "#881337",
+		},
+		{
+			bgColor: "bg-stone-900",
+			hex: "#1C1917",
+		},
+		{
+			bgColor: "bg-neutral-900",
+			hex: "#171717",
+		},
+		{
+			bgColor: "bg-zinc-900",
+			hex: "#18181B",
+		},
+		{
+			bgColor: "bg-gray-900",
+			hex: "#111827",
+		},
+		{
+			bgColor: "bg-slate-900",
+			hex: "#0F172A",
 		},
 		{
 			bgColor: "bg-black",
