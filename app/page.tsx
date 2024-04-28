@@ -1,3 +1,5 @@
+// todo: add logo input with file upload....
+
 "use client";
 
 import { useEffect, useState } from "react";
