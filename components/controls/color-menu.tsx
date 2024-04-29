@@ -1,6 +1,8 @@
 "use client";
 
 import { Brand } from "@/lib/types";
+import { ColorPicker } from "antd";
+import Sketch from "@uiw/react-color-sketch";
 
 import {
 	DropdownMenu,
@@ -53,17 +55,15 @@ export const ColorMenu = ({
 								</div>
 							</DropdownMenuTrigger>
 							<DropdownMenuContent>
-								<Input
-									id="primary-color"
-									placeholder="Hex"
-									type="color"
-									value={brand.colors.primary}
-									onChange={(e) => {
+								<Sketch
+									disableAlpha
+									color={brand.colors.primary}
+									onChange={(color) => {
 										setBrand({
 											...brand,
 											colors: {
 												...brand.colors,
-												primary: e.target.value,
+												primary: color.hex,
 											},
 										});
 									}}
@@ -87,17 +87,15 @@ export const ColorMenu = ({
 								</div>
 							</DropdownMenuTrigger>
 							<DropdownMenuContent>
-								<Input
-									id="secondary-color"
-									placeholder="Hex"
-									type="color"
-									value={brand.colors.secondary}
-									onChange={(e) => {
+								<Sketch
+									disableAlpha
+									color={brand.colors.secondary}
+									onChange={(color) => {
 										setBrand({
 											...brand,
 											colors: {
 												...brand.colors,
-												secondary: e.target.value,
+												secondary: color.hex,
 											},
 										});
 									}}
@@ -121,17 +119,15 @@ export const ColorMenu = ({
 								</div>
 							</DropdownMenuTrigger>
 							<DropdownMenuContent>
-								<Input
-									id="accent-color"
-									placeholder="Hex"
-									type="color"
-									value={brand.colors.accent}
-									onChange={(e) => {
+								<Sketch
+									disableAlpha
+									color={brand.colors.accent}
+									onChange={(color) => {
 										setBrand({
 											...brand,
 											colors: {
 												...brand.colors,
-												accent: e.target.value,
+												accent: color.hex,
 											},
 										});
 									}}
@@ -155,17 +151,15 @@ export const ColorMenu = ({
 								</div>
 							</DropdownMenuTrigger>
 							<DropdownMenuContent>
-								<Input
-									id="background-color"
-									placeholder="Hex"
-									type="color"
-									value={brand.colors.background}
-									onChange={(e) => {
+								<Sketch
+									disableAlpha
+									color={brand.colors.background}
+									onChange={(color) => {
 										setBrand({
 											...brand,
 											colors: {
 												...brand.colors,
-												background: e.target.value,
+												background: color.hex,
 											},
 										});
 									}}
@@ -189,17 +183,15 @@ export const ColorMenu = ({
 								</div>
 							</DropdownMenuTrigger>
 							<DropdownMenuContent>
-								<Input
-									id="foreground-color"
-									placeholder="Hex"
-									type="color"
-									value={brand.colors.foreground}
-									onChange={(e) => {
+								<Sketch
+									disableAlpha
+									color={brand.colors.foreground}
+									onChange={(color) => {
 										setBrand({
 											...brand,
 											colors: {
 												...brand.colors,
-												foreground: e.target.value,
+												foreground: color.hex,
 											},
 										});
 									}}

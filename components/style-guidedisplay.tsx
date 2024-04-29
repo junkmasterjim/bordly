@@ -38,7 +38,7 @@ export const StyleGuideDisplay = ({ brand }: { brand: Brand }) => {
 				{brand.title}
 				{brand.trademark == "true" ? "™" : ""} STYLE GUIDE
 			</h1>
-			<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mt-4">
+			<div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 mt-4">
 				<StyleGuideHeadingsTypography brand={brand} />
 				<StyleGuideBodyTypography brand={brand} />
 
@@ -105,7 +105,7 @@ export const StyleGuideDisplay = ({ brand }: { brand: Brand }) => {
 						</div>
 					</div>
 				</div>
-				<div className="md:col-span-1  xl:col-span-3">
+				<div className="md:col-span-1  2xl:col-span-3">
 					<h2
 						className={cn(
 							"text-xl font-bold border-b",
@@ -246,7 +246,7 @@ const StyleGuideHeadingsTypography = ({ brand }: { brand: Brand }) => {
 			>
 				TYPOGRAPHY - HEADINGS
 			</h2>
-			<div className={cn("mt-4")}>
+			<div className={cn("mt-4 overflow-hidden")}>
 				<h3
 					className={cn(fontClasses.headings.font, fontClasses.headings.weight)}
 				>
@@ -254,7 +254,7 @@ const StyleGuideHeadingsTypography = ({ brand }: { brand: Brand }) => {
 				</h3>
 				<p
 					className={cn(
-						"text-6xl font-bold mt-2",
+						"text-5xl font-bold mt-2",
 						fontClasses.headings.font,
 						fontClasses.headings.weight
 					)}
@@ -358,7 +358,7 @@ const StyleGuideBodyTypography = ({ brand }: { brand: Brand }) => {
 				</h3>
 				<p
 					className={cn(
-						"text-6xl font-bold mt-2",
+						"text-5xl font-bold mt-2",
 						fontClasses.body.font,
 						fontClasses.body.weight
 					)}

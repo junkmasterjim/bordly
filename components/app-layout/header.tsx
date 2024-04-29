@@ -1,15 +1,21 @@
 "use client";
 
 import { Brand } from "@/lib/types";
-import { useState } from "react";
 import { Button } from "../ui/button";
-import { ArrowRight, ChevronDown } from "lucide-react";
-import { cn } from "@/lib/utils";
-
-import { BackgroundColorSelect } from "../background-color-select";
-import { AccentColorSelect } from "../accent-color-select";
-import { motion } from "framer-motion";
 import Image from "next/image";
+import {
+	Sheet,
+	SheetContent,
+	SheetDescription,
+	SheetTitle,
+	SheetTrigger,
+} from "../ui/sheet";
+import { FontsDropdown } from "../controls/fonts-dropdown";
+import { WeightsDropdown } from "../controls/weights-dropdown";
+import { TMToggle } from "../controls/tm-toggle";
+import { UnderlineToggle } from "../controls/underline-toggle";
+import { ColorMenu } from "../controls/color-menu";
+import { Settings } from "lucide-react";
 
 export const Header = ({
 	defaultOpen = false,
@@ -20,11 +26,9 @@ export const Header = ({
 	brand: Brand;
 	setBrand: React.Dispatch<React.SetStateAction<Brand>>;
 }) => {
-	const [isOpen, setIsOpen] = useState(defaultOpen);
-	const toggle = () => setIsOpen((prev) => !prev);
 	return (
 		<>
-			<nav className="h-16 bg-background">
+			<nav className="h-14 bg-background">
 				<div className="relative flex items-center justify-between gap-4 px-3 shadow">
 					<span className="flex items-center justify-start gap-2">
 						<Image
@@ -33,36 +37,37 @@ export const Header = ({
 							alt="Bordly"
 							width={200}
 							height={200}
-							className="h-16 w-auto object-cover select-none pointer-events-none py-2"
+							className="h-14 w-auto object-cover select-none pointer-events-none py-2"
 						/>
 					</span>
 
-					<span className="flex gap-4 items-center">
-						<span className="font-semibold text-sm">
-							(Not optimized for mobile)
-						</span>
+					<span className="flex gap-4 items-center sm:hidden">
+						<Sheet>
+							<SheetTrigger asChild>
+								<Button variant={"outline"} size={"icon"}>
+									<Settings className="size-6" />
+								</Button>
+							</SheetTrigger>
+							<SheetContent side={"left"} className="overflow-y-auto">
+								<SheetTitle>Settings</SheetTitle>
+								<SheetDescription>
+									Change the settings for your brand here
+								</SheetDescription>
+								<div className="p-2 flex flex-col gap-2 items-center truncate pt-8">
+									{/* <HeadingsDropdown brand={brand} setBrand={setBrand} /> */}
+									<FontsDropdown brand={brand} setBrand={setBrand} />
+									<WeightsDropdown brand={brand} setBrand={setBrand} />
+									<div className="grid grid-cols-2 gap-2 w-full">
+										<TMToggle brand={brand} setBrand={setBrand} />
+										<UnderlineToggle brand={brand} setBrand={setBrand} />
+									</div>
+									<ColorMenu brand={brand} setBrand={setBrand} />
+								</div>
+							</SheetContent>
+						</Sheet>
 					</span>
 				</div>
 			</nav>
-
-			<motion.header
-				className={cn(
-					"shadow overflow-hidden relative z-0 bg-background text-foreground",
-					isOpen == true ? "" : "h-0"
-				)}
-				animate={{
-					opacity: isOpen ? 1 : 0,
-					transition: { duration: 0.5, type: "tween" },
-				}}
-			>
-				<div className="container space-y-4 py-4">
-					{/* Colors */}
-					<div className="text-center flex flex-col lg:flex-row justify-center items-center gap-2">
-						<BackgroundColorSelect brand={brand} setBrand={setBrand} />
-						<AccentColorSelect brand={brand} setBrand={setBrand} />
-					</div>
-				</div>
-			</motion.header>
 		</>
 	);
 };
