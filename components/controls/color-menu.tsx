@@ -1,7 +1,6 @@
 "use client";
 
 import { Brand } from "@/lib/types";
-import { ColorPicker } from "antd";
 import Sketch from "@uiw/react-color-sketch";
 
 import {
@@ -10,7 +9,6 @@ import {
 	DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 import { colors, getContrastingColor } from "@/lib/colors";
-import { Input } from "../ui/input";
 
 export const ColorMenu = ({
 	brand,
