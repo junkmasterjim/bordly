@@ -26,11 +26,14 @@ export const WeightsDropdown = ({
 		<DropdownMenu>
 			<DropdownMenuTrigger
 				className={cn(
-					"hover:bg-muted hover:text-muted-foreground size-9 rounded inline-flex items-center justify-center",
+					"hover:bg-muted hover:text-muted-foreground h-9 px-2 rounded inline-flex items-center justify-center w-full",
 					className
 				)}
 			>
-				<Weight strokeWidth={2.25} className="size-6" />
+				<div className="flex items-center justify-between text-sm font-semibold select-none gap-2 w-full">
+					Font Weight
+					<Weight strokeWidth={2.25} className="size-6" />
+				</div>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent
 				className="px-2 py-2 space-y-2 rounded-md"

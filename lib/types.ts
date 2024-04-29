@@ -22,10 +22,10 @@ export type Palette =
 	| "950";
 
 export type Brand = {
-	name: string;
+	title: string;
+	subtitle: string;
 	underline: "true" | "false";
 	trademark: "true" | "false";
-	description: string;
 	colors: {
 		primary: string;
 		secondary: string;

@@ -29,7 +29,7 @@ export const StyleGuideDisplay = ({ brand }: { brand: Brand }) => {
 					"text-2xl font-bold border-b uppercase"
 				)}
 			>
-				{brand.name}
+				{brand.title}
 				{brand.trademark == "true" ? "™" : ""} STYLE GUIDE
 			</h1>
 			<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mt-4">
@@ -48,49 +48,54 @@ export const StyleGuideDisplay = ({ brand }: { brand: Brand }) => {
 					</h2>
 					<div className="flex flex-col mt-4 gap-4">
 						<div
-							className="h-24 w-full shadow px-2 py-1 font-medium"
+							className="h-24 w-full shadow px-2 py-1 font-medium flex justify-between"
 							style={{
 								backgroundColor: brand.colors.primary,
 								color: getContrastingColor(brand.colors.primary),
 							}}
 						>
-							{brand.colors.primary}
+							<span className="uppercase">{brand.colors.primary}</span>
+							<span>Primary</span>
 						</div>
 						<div
-							className="h-24 w-full shadow px-2 py-1 font-medium"
+							className="h-24 w-full shadow px-2 py-1 font-medium flex justify-between"
 							style={{
 								backgroundColor: brand.colors.secondary,
 								color: getContrastingColor(brand.colors.secondary),
 							}}
 						>
-							{brand.colors.secondary}
+							<span className="uppercase">{brand.colors.secondary}</span>
+							<span>Secondary</span>
 						</div>
 						<div
-							className="h-24 w-full shadow px-2 py-1 font-medium"
+							className="h-24 w-full shadow px-2 py-1 font-medium flex justify-between"
 							style={{
 								backgroundColor: brand.colors.accent,
 								color: getContrastingColor(brand.colors.accent),
 							}}
 						>
-							{brand.colors.accent}
+							<span className="uppercase">{brand.colors.accent}</span>
+							<span>Accent</span>
 						</div>
 						<div
-							className="h-24 w-full shadow px-2 py-1 font-medium"
+							className="h-24 w-full shadow px-2 py-1 font-medium flex justify-between"
 							style={{
 								backgroundColor: brand.colors.background,
 								color: getContrastingColor(brand.colors.background),
 							}}
 						>
-							{brand.colors.background}
+							<span className="uppercase">{brand.colors.background}</span>
+							<span>Background</span>
 						</div>
 						<div
-							className="h-24 w-full shadow px-2 py-1 font-medium"
+							className="h-24 w-full shadow px-2 py-1 font-medium flex justify-between"
 							style={{
 								backgroundColor: brand.colors.foreground,
 								color: getContrastingColor(brand.colors.foreground),
 							}}
 						>
-							{brand.colors.foreground}
+							<span className="uppercase">{brand.colors.foreground}</span>
+							<span>Foreground</span>
 						</div>
 					</div>
 				</div>
@@ -104,89 +109,105 @@ export const StyleGuideDisplay = ({ brand }: { brand: Brand }) => {
 					>
 						LOGO VARIATIONS
 					</h2>
-					<div className="flex flex-col  xl:flex-row justify-center gap-4  mt-4">
-						<div
-							className="flex items-center justify-center h-24 w-full mb-4 shadow"
-							style={{
-								backgroundColor: brand.colors.primary,
-								color: getContrastingColor(brand.colors.primary),
-							}}
-						>
-							<img
-								alt=""
-								className="h-12 w-12"
-								height="50"
-								src="/logorounded.png"
+					<div className="flex flex-col xl:flex-row justify-center gap-4  mt-4">
+						<div className="flex flex-col w-full">
+							<div
+								className="flex items-center justify-center h-24 w-full mb-4 shadow"
 								style={{
-									aspectRatio: "50/50",
-									objectFit: "cover",
+									backgroundColor: brand.colors.primary,
+									color: getContrastingColor(brand.colors.primary),
 								}}
-								width="50"
-							/>
-							<span
-								className={cn(
-									"ml-2 font-bold",
-									brand.underline === "true" && "underline"
-								)}
 							>
-								{brand.name}
-								{brand.trademark === "true" ? "™" : ""}
+								<img
+									alt=""
+									className="h-12 w-12"
+									height="50"
+									src="/logorounded.png"
+									style={{
+										aspectRatio: "50/50",
+										objectFit: "cover",
+									}}
+									width="50"
+								/>
+								<span
+									className={cn(
+										"ml-2 font-bold",
+										brand.underline === "true" && "underline"
+									)}
+								>
+									{brand.title}
+									{brand.trademark === "true" ? "™" : ""}
+								</span>
+							</div>
+							<span className="font-semibold text-center text-sm">
+								On brand
 							</span>
 						</div>
-						<div
-							className="flex items-center justify-center h-24 w-full mb-4 shadow"
-							style={{
-								backgroundColor: brand.colors.foreground,
-								color: getContrastingColor(brand.colors.foreground),
-							}}
-						>
-							<img
-								alt=""
-								className="h-12 w-12"
-								height="50"
-								src="/logorounded.png"
+
+						<div className="flex flex-col w-full">
+							<div
+								className="flex items-center justify-center h-24 w-full shadow mb-4"
 								style={{
-									aspectRatio: "50/50",
-									objectFit: "cover",
+									backgroundColor: brand.colors.background,
+									color: getContrastingColor(brand.colors.background),
 								}}
-								width="50"
-							/>
-							<span
-								className={cn(
-									"ml-2 font-bold",
-									brand.underline === "true" && "underline"
-								)}
 							>
-								{brand.name}
-								{brand.trademark === "true" ? "™" : ""}
+								<img
+									alt=""
+									className="h-12 w-12"
+									height="50"
+									src="/logorounded.png"
+									style={{
+										aspectRatio: "50/50",
+										objectFit: "cover",
+									}}
+									width="50"
+								/>
+								<span
+									className={cn(
+										"ml-2 font-bold",
+										brand.underline === "true" && "underline"
+									)}
+								>
+									{brand.title}
+									{brand.trademark === "true" ? "™" : ""}
+								</span>
+							</div>
+							<span className="font-semibold text-center text-sm">
+								On background
 							</span>
 						</div>
-						<div
-							className="flex items-center justify-center h-24 w-full shadow"
-							style={{
-								backgroundColor: brand.colors.background,
-								color: getContrastingColor(brand.colors.background),
-							}}
-						>
-							<img
-								alt=""
-								className="h-12 w-12"
-								height="50"
-								src="/logorounded.png"
+						<div className="flex flex-col w-full">
+							<div
+								className="flex items-center justify-center h-24 w-full mb-4 shadow"
 								style={{
-									aspectRatio: "50/50",
-									objectFit: "cover",
+									backgroundColor: brand.colors.foreground,
+									color: getContrastingColor(brand.colors.foreground),
 								}}
-								width="50"
-							/>
-							<span
-								className={cn(
-									"ml-2 font-bold",
-									brand.underline === "true" && "underline"
-								)}
 							>
-								{brand.name}
-								{brand.trademark === "true" ? "™" : ""}
+								<img
+									alt=""
+									className="h-12 w-12"
+									height="50"
+									src="/logorounded.png"
+									style={{
+										aspectRatio: "50/50",
+										objectFit: "cover",
+									}}
+									width="50"
+								/>
+								<span
+									className={cn(
+										"ml-2 font-bold",
+										brand.underline === "true" && "underline"
+									)}
+								>
+									{brand.title}
+									{brand.trademark === "true" ? "™" : ""}
+								</span>
+							</div>
+							<span className="font-semibold text-center text-sm">
+								On foreground
 							</span>
 						</div>
 					</div>

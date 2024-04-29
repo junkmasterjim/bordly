@@ -53,7 +53,7 @@ export const DashboardExample = ({ brand }: { brand: Brand }) => {
 								className="h-12 w-auto object-cover"
 							/>
 							<h1 className={"text-2xl font-bold"}>
-								{brand.name}
+								{brand.title}
 								<span>{brand.trademark == "true" ? "™" : ""}</span>
 							</h1>
 						</div>

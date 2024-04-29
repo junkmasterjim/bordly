@@ -25,34 +25,34 @@ export const HeadingsDropdown = ({
 		<DropdownMenu>
 			<DropdownMenuTrigger
 				className={cn(
-					"hover:bg-muted hover:text-muted-foreground size-9 rounded inline-flex items-center justify-center",
+					"hover:bg-muted hover:text-muted-foreground h-9 w-full rounded inline-flex items-center justify-center",
 					className
 				)}
 			>
-				<Text className="size-6" />
+				<div className="flex items-center justify-between text-sm font-semibold select-none gap-2 w-full px-2">
+					Heading & Subtitle
+					<Text className="h-4 w-4" />
+				</div>
 			</DropdownMenuTrigger>
-			<DropdownMenuContent
-				className="px-2 py-2 space-y-2 rounded-md"
-				align="start"
-			>
+			<DropdownMenuContent className="py-2 space-y-2 rounded-md" align="start">
 				<span className="flex items-center justify-center text-sm font-semibold select-none">
 					Heading & Subtitle
 				</span>
 				<DropdownMenuSeparator />
 				<Input
-					placeholder="Name"
-					value={brand.name}
+					placeholder="Heading"
+					value={brand.title}
 					onChange={(e) => {
-						setBrand({ ...brand, name: e.target.value });
+						setBrand({ ...brand, title: e.target.value });
 					}}
 				/>
 				<Textarea
 					rows={4}
-					placeholder="Description"
+					placeholder="Subtitle"
 					className="resize-none"
-					value={brand.description}
+					value={brand.subtitle}
 					onChange={(e) => {
-						setBrand({ ...brand, description: e.target.value });
+						setBrand({ ...brand, subtitle: e.target.value });
 					}}
 				/>
 			</DropdownMenuContent>

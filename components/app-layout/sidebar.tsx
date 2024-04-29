@@ -9,6 +9,7 @@ import { UnderlineToggle } from "../controls/underline-toggle";
 import { ArrowRight, ChevronsLeft, ChevronsRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { ColorMenu } from "../controls/color-menu";
 
 export const Sidebar = ({
 	brand,
@@ -45,7 +46,7 @@ export const Sidebar = ({
 						width: isOpen ? "250px" : "0",
 						overflowX: isOpen ? "visible" : "hidden",
 					}}
-					className="w-full max-w-[250px] h-full border-r text-foreground py-2 relative"
+					className="w-full max-w-[250px] overflow-y-scroll pb-24 h-full border-r text-foreground py-2 relative"
 				>
 					<div className="h-8 absolute top-2 right-2 z-50">
 						<button
@@ -55,27 +56,15 @@ export const Sidebar = ({
 							<ChevronsLeft className="h-4 w-4" />
 						</button>
 					</div>
-					<div className="container flex flex-col gap-4 items-center truncate pt-8">
-						<div className="flex items-center justify-between text-sm font-semibold select-none gap-2 w-full">
-							Text Content <ArrowRight className="h-4 w-4" />
-							<HeadingsDropdown brand={brand} setBrand={setBrand} />
-						</div>
-						<div className="flex items-center justify-between text-sm font-semibold select-none gap-2 w-full">
-							Font Family <ArrowRight className="h-4 w-4" />
-							<FontsDropdown brand={brand} setBrand={setBrand} />
-						</div>
-						<div className="flex items-center justify-between text-sm font-semibold select-none gap-2 w-full">
-							Font Weight <ArrowRight className="h-4 w-4" />
-							<WeightsDropdown brand={brand} setBrand={setBrand} />
-						</div>
-						<div className="flex items-center justify-between text-sm font-semibold select-none gap-2 w-full">
-							Trademark <ArrowRight className="h-4 w-4" />
+					<div className="p-2 flex flex-col gap-2 items-center truncate pt-8">
+						{/* <HeadingsDropdown brand={brand} setBrand={setBrand} /> */}
+						<FontsDropdown brand={brand} setBrand={setBrand} />
+						<WeightsDropdown brand={brand} setBrand={setBrand} />
+						<div className="grid grid-cols-2 gap-2 w-full">
 							<TMToggle brand={brand} setBrand={setBrand} />
-						</div>
-						<div className="flex items-center justify-between text-sm font-semibold select-none gap-2 w-full">
-							Underline <ArrowRight className="h-4 w-4" />
 							<UnderlineToggle brand={brand} setBrand={setBrand} />
 						</div>
+						<ColorMenu brand={brand} setBrand={setBrand} />
 					</div>
 				</motion.div>
 			</div>

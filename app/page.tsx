@@ -16,10 +16,10 @@ const poppins = Poppins({
 
 const Page = () => {
 	const [brand, setBrand] = useState<Brand>({
-		name: "Bordly",
+		title: "Bordly",
+		subtitle: "prototype your design system in 5 minutes with bordly",
 		underline: "true",
 		trademark: "true",
-		description: "prototype your design system in 5 minutes with bordly",
 		colors: {
 			primary: "#2D95EC",
 			secondary: "#666666",
@@ -44,8 +44,11 @@ const Page = () => {
 			<Header brand={brand} setBrand={setBrand} />
 			<div className="flex w-full h-svh">
 				<Sidebar brand={brand} setBrand={setBrand} />
-				{/* <EditorDisplay brand={brand} setBrand={setBrand} /> */}
-				<StyleGuideDisplay brand={brand} />
+
+				<div className="overflow-auto max-h-screen px-4 w-full">
+					<StyleGuideDisplay brand={brand} />
+					{/* <EditorDisplay brand={brand} setBrand={setBrand} /> */}
+				</div>
 			</div>
 		</body>
 	);

@@ -23,7 +23,7 @@ export const TMToggle = ({
 				});
 			}}
 			className={cn(
-				"h-9 aspect-square p-0 align-text-bottom flex justify-center items-center text-2xl select-none",
+				"h-9 px-2 align-text-bottom flex justify-center items-center text-2xl select-none w-full",
 				className
 			)}
 		>

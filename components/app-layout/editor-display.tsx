@@ -24,7 +24,7 @@ export const EditorDisplay = ({
 				backgroundColor: brand.colors.background,
 				color: getContrastingColor(brand.colors.background),
 			}}
-			className={"overflow-auto max-h-screen px-4 w-full"}
+			className={"px-4 w-full"}
 		>
 			<div className="container flex flex-col gap-4 items-center text-center h-64 pt-20 ">
 				<span
@@ -40,7 +40,7 @@ export const EditorDisplay = ({
 						brand.underline === "true" && "underline"
 					)}
 				>
-					{brand.trademark == "true" ? `${brand.name}™` : brand.name}
+					{brand.trademark == "true" ? `${brand.title}™` : brand.title}
 				</span>
 
 				<span
@@ -54,7 +54,7 @@ export const EditorDisplay = ({
 						bodyWeight(brand.font.body.weight)
 					)}
 				>
-					{brand.description}
+					{brand.subtitle}
 				</span>
 			</div>
 

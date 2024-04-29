@@ -35,30 +35,12 @@ export const Header = ({
 							height={200}
 							className="h-16 w-auto object-cover select-none pointer-events-none py-2"
 						/>
-						<span className="font-bold text-xs">
-							(Not optimized for mobile)
-						</span>
 					</span>
 
 					<span className="flex gap-4 items-center">
-						{/* Toggle */}
-						<div className="font-bold text-sm mr-2 inline-flex items-center gap-2">
-							Colors <ArrowRight className="h-4 w-4" />
-						</div>
-						<div className="size-8">
-							<div className="absolute top-3 right-4 z-50">
-								<Button onClick={toggle} size={"icon"} variant={"outline"}>
-									<motion.span
-										animate={{
-											rotateX: isOpen ? "180deg" : "0deg",
-											transition: { duration: 0.3, type: "tween" },
-										}}
-									>
-										<ChevronDown className="h-4 w-4" />
-									</motion.span>
-								</Button>
-							</div>
-						</div>
+						<span className="font-semibold text-sm">
+							(Not optimized for mobile)
+						</span>
 					</span>
 				</div>
 			</nav>
