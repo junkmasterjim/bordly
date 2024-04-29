@@ -29,7 +29,7 @@ export const Sidebar = ({
 						visibility: isOpen ? "hidden" : "visible",
 						opacity: isOpen ? 0 : 1,
 					}}
-					className="size-6 absolute top-2 hidden left-2  hover:bg-accent items-center justify-center rounded"
+					className="size-6 absolute top-2 hidden left-2  hover:bg-accent-foreground items-center justify-center hover:text-accent bg-accent text-accent-foreground p-1 rounded transition-all"
 					onClick={() => setIsOpen((prev) => !prev)}
 				>
 					<ChevronsRight className="h-4 w-4" />
@@ -45,12 +45,13 @@ export const Sidebar = ({
 					animate={{
 						width: isOpen ? "250px" : "0",
 						overflowX: isOpen ? "visible" : "hidden",
+						borderWidth: isOpen ? "1px" : "0",
 					}}
 					className="w-full max-w-[250px] overflow-y-scroll pb-24 h-full border-r text-foreground py-2 relative"
 				>
 					<div className="h-8 absolute top-2 right-2 z-50">
 						<button
-							className="hover:bg-accent p-1 rounded"
+							className="hover:bg-accent-foreground hover:text-accent bg-accent text-accent-foreground p-1 rounded transition-all"
 							onClick={() => setIsOpen((prev) => !prev)}
 						>
 							<ChevronsLeft className="h-4 w-4" />

@@ -21,7 +21,13 @@ export const StyleGuideDisplay = ({ brand }: { brand: Brand }) => {
 	};
 
 	return (
-		<div className="flex w-full flex-col p-8 overflow-y-auto pb-32">
+		<div
+			className="flex w-full flex-col p-8 overflow-y-auto pb-32"
+			style={{
+				backgroundColor: brand.colors.background,
+				color: brand.colors.foreground,
+			}}
+		>
 			<h1
 				className={cn(
 					fontClasses.headings.font,
