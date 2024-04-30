@@ -46,8 +46,10 @@ const Page = () => {
 				<Sidebar brand={brand} setBrand={setBrand} />
 
 				<div className="overflow-auto max-h-screen w-full">
-					<StyleGuideDisplay brand={brand} />
-					{/* <EditorDisplay brand={brand} setBrand={setBrand} /> */}
+					<span id="capture">
+						<StyleGuideDisplay brand={brand} />
+						{/* <EditorDisplay brand={brand} setBrand={setBrand} /> */}
+					</span>
 				</div>
 			</div>
 		</body>

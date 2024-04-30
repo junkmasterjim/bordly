@@ -32,7 +32,7 @@ export const StyleGuideDisplay = ({ brand }: { brand: Brand }) => {
 				className={cn(
 					fontClasses.headings.font,
 					fontClasses.headings.weight,
-					"text-2xl font-bold border-b uppercase"
+					"text-2xl font-bold border-b uppercase pb-2"
 				)}
 			>
 				{brand.title}
@@ -45,7 +45,7 @@ export const StyleGuideDisplay = ({ brand }: { brand: Brand }) => {
 				<div>
 					<h2
 						className={cn(
-							"text-xl font-bold border-b",
+							"text-xl font-bold border-b pb-2",
 							fontClasses.headings.font,
 							fontClasses.headings.weight
 						)}
@@ -86,16 +86,6 @@ export const StyleGuideDisplay = ({ brand }: { brand: Brand }) => {
 						<div
 							className="h-24 w-full shadow px-2 py-1 font-medium flex justify-between"
 							style={{
-								backgroundColor: brand.colors.background,
-								color: getContrastingColor(brand.colors.background),
-							}}
-						>
-							<span className="uppercase">{brand.colors.background}</span>
-							<span>Background</span>
-						</div>
-						<div
-							className="h-24 w-full shadow px-2 py-1 font-medium flex justify-between"
-							style={{
 								backgroundColor: brand.colors.foreground,
 								color: getContrastingColor(brand.colors.foreground),
 							}}
@@ -103,12 +93,22 @@ export const StyleGuideDisplay = ({ brand }: { brand: Brand }) => {
 							<span className="uppercase">{brand.colors.foreground}</span>
 							<span>Foreground</span>
 						</div>
+						<div
+							className="h-24 w-full shadow px-2 py-1 font-medium flex justify-between"
+							style={{
+								backgroundColor: brand.colors.background,
+								color: getContrastingColor(brand.colors.background),
+							}}
+						>
+							<span className="uppercase">{brand.colors.background}</span>
+							<span>Background</span>
+						</div>
 					</div>
 				</div>
 				<div className="md:col-span-1  2xl:col-span-3">
 					<h2
 						className={cn(
-							"text-xl font-bold border-b",
+							"text-xl font-bold border-b pb-2",
 							fontClasses.headings.font,
 							fontClasses.headings.weight
 						)}
@@ -152,39 +152,6 @@ export const StyleGuideDisplay = ({ brand }: { brand: Brand }) => {
 
 						<div className="flex flex-col w-full">
 							<div
-								className="flex items-center justify-center h-24 w-full shadow mb-4"
-								style={{
-									backgroundColor: brand.colors.background,
-									color: getContrastingColor(brand.colors.background),
-								}}
-							>
-								<img
-									alt=""
-									className="h-12 w-12"
-									height="50"
-									src="/logorounded.png"
-									style={{
-										aspectRatio: "50/50",
-										objectFit: "cover",
-									}}
-									width="50"
-								/>
-								<span
-									className={cn(
-										"ml-2 font-bold",
-										brand.underline === "true" && "underline"
-									)}
-								>
-									{brand.title}
-									{brand.trademark === "true" ? "™" : ""}
-								</span>
-							</div>
-							<span className="font-semibold text-center text-sm">
-								On background
-							</span>
-						</div>
-						<div className="flex flex-col w-full">
-							<div
 								className="flex items-center justify-center h-24 w-full mb-4 shadow"
 								style={{
 									backgroundColor: brand.colors.foreground,
@@ -216,6 +183,39 @@ export const StyleGuideDisplay = ({ brand }: { brand: Brand }) => {
 								On foreground
 							</span>
 						</div>
+						<div className="flex flex-col w-full">
+							<div
+								className="flex items-center justify-center h-24 w-full shadow mb-4"
+								style={{
+									backgroundColor: brand.colors.background,
+									color: getContrastingColor(brand.colors.background),
+								}}
+							>
+								<img
+									alt=""
+									className="h-12 w-12"
+									height="50"
+									src="/logorounded.png"
+									style={{
+										aspectRatio: "50/50",
+										objectFit: "cover",
+									}}
+									width="50"
+								/>
+								<span
+									className={cn(
+										"ml-2 font-bold",
+										brand.underline === "true" && "underline"
+									)}
+								>
+									{brand.title}
+									{brand.trademark === "true" ? "™" : ""}
+								</span>
+							</div>
+							<span className="font-semibold text-center text-sm">
+								On background
+							</span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -239,7 +239,7 @@ const StyleGuideHeadingsTypography = ({ brand }: { brand: Brand }) => {
 		<div>
 			<h2
 				className={cn(
-					"text-xl font-bold border-b",
+					"text-xl font-bold border-b pb-2",
 					fontClasses.headings.font,
 					fontClasses.headings.weight
 				)}
@@ -288,9 +288,10 @@ const StyleGuideHeadingsTypography = ({ brand }: { brand: Brand }) => {
 				>
 					12345678910
 				</p>
+				<div className="flex gap-2 justify-between"></div>
 				<div
 					className={cn(
-						"mt-6",
+						"mt-2",
 						fontClasses.headings.font,
 						fontClasses.headings.weight
 					)}
@@ -304,23 +305,9 @@ const StyleGuideHeadingsTypography = ({ brand }: { brand: Brand }) => {
 						HEADER TEXT WEIGHT
 					</h4>
 					<p className="text-5xl mt-2">Aa</p>
-				</div>
-				<div
-					className={cn(
-						"mt-6",
-						fontClasses.headings.font,
-						fontClasses.headings.weight
-					)}
-				>
-					<h4
-						className={cn(
-							fontClasses.headings.font,
-							fontClasses.headings.weight
-						)}
-					>
-						SUB HEADER TEXT WEIGHT
-					</h4>
-					<p className="text-4xl mt-2">Aa</p>
+					<p className="text-3xl mt-2">Aa</p>
+					<p className="text-3xl mt-2"></p>
+					<p className="text-3xl mt-2"></p>
 				</div>
 			</div>
 		</div>
@@ -343,7 +330,7 @@ const StyleGuideBodyTypography = ({ brand }: { brand: Brand }) => {
 		<div>
 			<h2
 				className={cn(
-					"text-xl font-bold border-b",
+					"text-xl font-bold border-b pb-2",
 					fontClasses.headings.font,
 					fontClasses.headings.weight
 				)}
@@ -393,7 +380,7 @@ const StyleGuideBodyTypography = ({ brand }: { brand: Brand }) => {
 					12345678910
 				</p>
 
-				<div className="mt-6">
+				<div className="mt-4">
 					<h4
 						className={cn(
 							fontClasses.headings.font,
