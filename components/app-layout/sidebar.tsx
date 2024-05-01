@@ -58,7 +58,7 @@ export const Sidebar = ({
 						</button>
 					</div>
 					<div className="p-2 flex flex-col gap-2 items-center truncate pt-8">
-						{/* <HeadingsDropdown brand={brand} setBrand={setBrand} /> */}
+						<HeadingsDropdown brand={brand} setBrand={setBrand} />
 						<FontsDropdown brand={brand} setBrand={setBrand} />
 						<WeightsDropdown brand={brand} setBrand={setBrand} />
 						<div className="grid grid-cols-2 gap-2 w-full">

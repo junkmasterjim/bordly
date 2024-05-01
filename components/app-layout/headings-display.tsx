@@ -9,9 +9,8 @@ import {
 } from "@/lib/fonts";
 import { Brand } from "@/lib/types";
 import { cn } from "@/lib/utils";
-import { DashboardExample } from "../dashboard-example/dashboard-example";
 
-export const EditorDisplay = ({
+export const HeadingsDisplay = ({
 	brand,
 	setBrand,
 }: {
@@ -30,13 +29,13 @@ export const EditorDisplay = ({
 				<span
 					style={{
 						textDecorationColor: brand.colors.accent,
+						textDecorationThickness: "8px",
+						color: brand.colors.foreground,
 					}}
 					className={cn(
-						"text-7xl",
+						"text-7xl decoration-8",
 						headingsFont(brand.font.headings.font).className,
 						headingsWeight(brand.font.headings.weight),
-						headingsWeight(brand.font.headings.weight) == "font-black" &&
-							"font-black",
 						brand.underline === "true" && "underline"
 					)}
 				>
@@ -49,7 +48,7 @@ export const EditorDisplay = ({
 						opacity: 0.7,
 					}}
 					className={cn(
-						"text-2xl font-medium",
+						"text-lg lg:text-xl font-medium",
 						bodyFont(brand.font.body.font).className,
 						bodyWeight(brand.font.body.weight)
 					)}
@@ -57,9 +56,6 @@ export const EditorDisplay = ({
 					{brand.subtitle}
 				</span>
 			</div>
-
-			<DashboardExample brand={brand} />
-			<div className="py-24" />
 		</main>
 	);
 };
